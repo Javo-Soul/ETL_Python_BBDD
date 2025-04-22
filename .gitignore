@@ -1,0 +1,35 @@
+# archivos de configuración de gitignore para Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.env
+*.csv
+*.log
+*.txt
+# Distribution / packaging
+archivoscsv/
+test/
+.Python
+env/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# carpetas de datos
+modulos/datos/archivocsv/
+modulos/datos/archivotxt/
+modulos/log_cargas/logs/
+archivocsv/
+
+# pyenv
+.python-version
+
+# Pyre
+.pyre/
+
+# VS Code
+.vscode/
+
+# IDEs
+__pycache__/
