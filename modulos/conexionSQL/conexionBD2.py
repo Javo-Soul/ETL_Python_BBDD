@@ -1,0 +1,152 @@
+import pyodbc
+import os
+import json
+from dotenv import load_dotenv
+import configparser
+load_dotenv()
+import logging
+from modulos.log_cargas.log_config import logger
+##-------- archivo config ---------------
+config = configparser.ConfigParser()
+config.read('config.ini')
+
+bd_config = {
+    'host'      : config['BBDD']['host'],
+    'base_datos': config['BBDD']['base_datos']
+}
+#----------------------------------------
+# Configuración del logger
+logger.info("Iniciando conexión a la base de datos SQL")
+#----------------------------------------
+
+class conexionSQL:
+    def __init__(self):
+        self.localhost     = bd_config['host']
+        self.localDatabase = bd_config['base_datos']
+        self.produccion    = os.getenv('Server_Produccion')
+        self.contingencia  = os.getenv('Server_Contingencia')
+        self.IWS           = os.getenv('Server_IWS')
+        
+    def conexion_produccion(self):
+        connection = ''
+        try:
+            credentials = self.produccion
+            credentials = json.loads(credentials)
+            usuario     = credentials.get('Usuario')
+            password    = credentials.get('Password')
+            Host        = credentials.get('IP')
+
+            connection = pyodbc.connect(
+                driver ='{iSeries Access ODBC Driver}',
+                system = Host,
+                uid    = usuario,
+                pwd    = password)
+
+            logger.info(f"Conexión a la base de datos Produccion {Host}")
+        except Exception as e:
+            logger.error("Error de conexión SQL", exc_info=True)
+            print(e)
+
+        return connection
+
+    def conexion_IWS(self):
+        connection = ''
+        try:
+            credentials = self.IWS
+            credentials = json.loads(credentials)
+            user        = credentials.get('Usuario')
+            password    = credentials.get('Password')
+            database    = credentials.get('IP')
+
+            connection_string = f'''Driver=SQL Anywhere 17;UID={user};PWD={password};DatabaseName={database};ServerName=acuarius_iws;Host=datawarehouse-01:2638'''
+            connection = pyodbc.connect(connection_string)
+            logger.info(f"Conexión a la base de datos IWS {database}")
+        except Exception as e:
+            logger.error("Error de conexión SQL", exc_info=True)
+
+        return connection
+
+    def conexion_contingencia(self):
+        connection = ''
+        try:
+            credentials = self.contingencia
+            credentials = json.loads(credentials)
+            usuario     = credentials.get('Usuario')
+            password    = credentials.get('Password')
+            Host        = credentials.get('IP')
+            
+            connection = pyodbc.connect(
+                driver='{iSeries Access ODBC Driver}',
+                system = Host,
+                uid = usuario,
+                pwd = password)
+            logger.info(f"Conexión a la base de datos Contingencia {Host}")
+
+        except Exception as e:
+            logger.error("Error de conexión SQL", exc_info=True)
+
+        return connection
+
+    def conexionSQLServer(self):
+        conn = ''
+        try:
+            conn = ''
+            server = self.localhost
+            database = self.localDatabase
+            conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';Trusted_Connection=yes')
+            logger.info(f"Conexión a la base de datos SQL Server {server}")
+        except Exception as e:
+            logger.error("Error de conexión SQL", exc_info=True)
+
+        return conn
+
+    def querySql(self, query, tipo, valores=None):
+        response = []
+        try:
+            conexion = self.conexionSQLServer()
+            cursor = conexion.cursor()
+
+            if tipo == 'select':
+                cursor.execute(query, valores or [])
+                response = cursor.fetchone()
+
+            elif tipo == 'select all':
+                cursor.execute(query, valores or [])
+                response = cursor.fetchall()
+
+            elif tipo == 'insert':
+                with conexion.cursor() as cursor:
+                    cursor.execute(query, valores or [])
+                    response = 'Ejecutado Exitosamente'
+
+            elif tipo == 'exec':
+                cursor.execute(query, valores or [])
+                while cursor.nextset():
+                    pass
+                response = 'Ejecutado Exitosamente'
+
+            else:
+                response = ['Accion no válida']
+
+        except pyodbc.Error as ex:
+            print(f"SQL Error: {ex}")
+            logger.error("Error general en operación SQL", exc_info=True)
+            response = ex
+
+        except Exception as e:
+            print(f"Error general: {e}")
+            response = e
+
+        finally:
+            try:
+                conexion.commit()
+                conexion.close()
+            except:
+                pass
+
+        return response
+
+bd = conexionSQL()
+produccion = bd.conexion_contingencia()
+print(produccion)
+

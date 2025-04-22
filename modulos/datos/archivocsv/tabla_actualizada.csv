@@ -1,0 +1,13 @@
+;nombre_tabla;fecha;cantidad_total;cargados;dif;estado;fecha_carga
+0;[db2_produccion_tefabm];2024-04-04;700;700;0;Ejecutado Exitosamente;2024-04-04 17:00:58
+1;[db2_produccion_trans];2024-04-04;0;0;0;Ejecutado Exitosamente;2024-04-04 17:00:58
+2;[db2_produccion_audit];2024-04-04;64072;64072;0;Ejecutado Exitosamente;2024-04-04 17:00:58
+3;[db2_produccion_tefabm];2024-04-04;700;700;0;Ejecutado Exitosamente;2024-04-04 16:24:59
+4;[db2_produccion_trans];2024-04-04;0;0;0;Ejecutado Exitosamente;2024-04-04 16:24:59
+5;[db2_produccion_audit];2024-04-04;62011;62011;0;Ejecutado Exitosamente;2024-04-04 16:24:59
+6;[db2_produccion_trans];2024-04-04;0;0;0;Ejecutado Exitosamente;2024-04-04 16:22:53
+7;[db2_produccion_tefabm];2024-04-04;700;681;19;"(42000, ""[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]String or binary data would be truncated in table prod_ctrl_contable.t_paso_ctr_op.db2_produccion_tefabm, column tefesf. Truncated value: N° TRACE DUPLICADO/ TRANSACCIÓN NO DUPLI. (2628) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)"")";2024-04-04 16:22:53
+8;[db2_produccion_tefabm];2024-04-04;700;681;19;"(42000, ""[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]String or binary data would be truncated in table prod_ctrl_contable.t_paso_ctr_op.db2_produccion_tefabm, column tefesf. Truncated value: N° TRACE DUPLICADO/ TRANSACCIÓN NO DUPLI. (2628) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)"")";2024-04-04 16:21:20
+9;[db2_produccion_trans];2024-04-04;0;0;0;Ejecutado Exitosamente;2024-04-04 16:21:20
+10;[db2_produccion_tefabm];2024-04-04;700;681;19;"(42000, ""[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]String or binary data would be truncated in table prod_ctrl_contable.t_paso_ctr_op.db2_produccion_tefabm, column tefesf. Truncated value: N° TRACE DUPLICADO/ TRANSACCIÓN NO DUPLI. (2628) (SQLExecDirectW); [42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)"")";2024-04-04 16:18:45
+11;[db2_produccion_trans];2024-04-04;0;0;0;Ejecutado Exitosamente;2024-04-04 16:18:45

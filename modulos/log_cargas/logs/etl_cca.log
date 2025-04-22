@@ -1,0 +1,1457 @@
+2025-04-21 14:12:39 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 14:12:39 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 14:12:39 - etl_cca - INFO - Archivos válidos encontrados: ['EXAP672250416145408', 'EXAP672250417143941', 'EXAP672250421013157', 'EXRE672250416013046', 'EXRE672250416145409', 'EXRE672250417012443', 'EXRE672250417143941', 'EXRE672250421013158', 'EXRV672250416013046', 'EXRV672250416145409', 'EXRV672250421013158', 'RBAP672250416100000', 'RBAP672250416150000', 'RBRE672250416100000']
+2025-04-21 14:12:39 - etl_cca - INFO - EXAP672250416145408 - Leyendo archivo
+2025-04-21 14:12:40 - etl_cca - INFO - EXAP672250416145408 - Procesando 28245 datos
+2025-04-21 14:12:50 - etl_cca - INFO - EXAP672250416145408 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-21 14:12:54 - etl_cca - INFO - EXAP672250416145408 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-21 14:12:54 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 14.11 seg 
+
+2025-04-21 14:12:54 - etl_cca - INFO - EXAP672250417143941 - Leyendo archivo
+2025-04-21 14:12:55 - etl_cca - INFO - EXAP672250417143941 - Procesando 37027 datos
+2025-04-21 14:13:06 - etl_cca - INFO - EXAP672250417143941 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-21 14:13:10 - etl_cca - INFO - EXAP672250417143941 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-21 14:13:10 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 14.98 seg 
+
+2025-04-21 14:13:10 - etl_cca - INFO - EXAP672250421013157 - Leyendo archivo
+2025-04-21 14:13:15 - etl_cca - INFO - EXAP672250421013157 - Procesando 167205 datos
+2025-04-21 14:14:12 - etl_cca - INFO - EXAP672250421013157 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-21 14:14:22 - etl_cca - INFO - EXAP672250421013157 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-21 14:14:22 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 66.80 seg 
+
+2025-04-21 14:14:22 - etl_cca - INFO - EXRE672250416013046 - Leyendo archivo
+2025-04-21 14:14:23 - etl_cca - INFO - EXRE672250416013046 - Procesando 1835 datos
+2025-04-21 14:14:24 - etl_cca - INFO - EXRE672250416013046 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 14:14:25 - etl_cca - INFO - EXRE672250416013046 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 14:14:25 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.51 seg 
+
+2025-04-21 14:14:25 - etl_cca - INFO - EXRE672250416145409 - Leyendo archivo
+2025-04-21 14:14:25 - etl_cca - INFO - EXRE672250416145409 - Procesando 515 datos
+2025-04-21 14:14:25 - etl_cca - INFO - EXRE672250416145409 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 14:14:26 - etl_cca - INFO - EXRE672250416145409 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 14:14:26 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 1.38 seg 
+
+2025-04-21 14:14:26 - etl_cca - INFO - EXRE672250417012443 - Leyendo archivo
+2025-04-21 14:14:27 - etl_cca - INFO - EXRE672250417012443 - Procesando 700 datos
+2025-04-21 14:14:27 - etl_cca - INFO - EXRE672250417012443 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 14:14:28 - etl_cca - INFO - EXRE672250417012443 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 14:14:28 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 1.71 seg 
+
+2025-04-21 14:14:28 - etl_cca - INFO - EXRE672250417143941 - Leyendo archivo
+2025-04-21 14:14:28 - etl_cca - INFO - EXRE672250417143941 - Procesando 754 datos
+2025-04-21 14:14:28 - etl_cca - INFO - EXRE672250417143941 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 14:14:30 - etl_cca - INFO - EXRE672250417143941 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 14:14:30 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.10 seg 
+
+2025-04-21 14:14:30 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 14:14:30 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 14:14:31 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 14:14:36 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 14:14:36 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 5.10 seg 
+
+2025-04-21 14:14:36 - etl_cca - INFO - EXRV672250416013046 - Leyendo archivo
+2025-04-21 14:14:36 - etl_cca - INFO - EXRV672250416013046 - Procesando 4136 datos
+2025-04-21 14:14:37 - etl_cca - INFO - EXRV672250416013046 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 14:14:38 - etl_cca - INFO - EXRV672250416013046 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 14:14:38 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.47 seg 
+
+2025-04-21 14:14:38 - etl_cca - INFO - EXRV672250416145409 - Leyendo archivo
+2025-04-21 14:14:38 - etl_cca - INFO - EXRV672250416145409 - Procesando 148 datos
+2025-04-21 14:14:38 - etl_cca - INFO - EXRV672250416145409 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 14:14:40 - etl_cca - INFO - EXRV672250416145409 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 14:14:40 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 1.75 seg 
+
+2025-04-21 14:14:40 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 14:14:40 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 14:14:40 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 14:14:46 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 14:14:46 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 5.71 seg 
+
+2025-04-21 14:14:46 - etl_cca - INFO - RBAP672250416100000 - Leyendo archivo
+2025-04-21 14:14:46 - etl_cca - INFO - RBAP672250416150000 - Leyendo archivo
+2025-04-21 14:14:46 - etl_cca - INFO - RBRE672250416100000 - Leyendo archivo
+2025-04-21 14:14:46 - etl_cca - INFO - RBRE672250416100000 - Procesando 139 datos
+2025-04-21 14:14:46 - etl_cca - INFO - RBRE672250416100000 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 14:14:47 - etl_cca - INFO - RBRE672250416100000 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 14:14:47 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 1.69 seg 
+
+2025-04-21 15:29:54 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 15:29:54 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 15:29:55 - etl_cca - INFO - Archivos válidos encontrados: ['EXAP672250416145408', 'EXAP672250417143941', 'EXAP672250421013157', 'EXRE672250417012443', 'EXRE672250417143941', 'EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 15:29:55 - etl_cca - INFO - EXAP672250416145408 - Leyendo archivo
+2025-04-21 15:29:55 - etl_cca - INFO - EXAP672250416145408 - Procesando 28245 datos
+2025-04-21 15:30:04 - etl_cca - INFO - EXAP672250416145408 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-21 15:30:06 - etl_cca - INFO - EXAP672250416145408 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-21 15:30:06 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 10.97 seg 
+
+2025-04-21 15:30:06 - etl_cca - INFO - EXAP672250417143941 - Leyendo archivo
+2025-04-21 15:30:07 - etl_cca - INFO - EXAP672250417143941 - Procesando 37027 datos
+2025-04-21 15:30:15 - etl_cca - INFO - EXAP672250417143941 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-21 15:30:18 - etl_cca - INFO - EXAP672250417143941 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-21 15:30:18 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 10.65 seg 
+
+2025-04-21 15:30:18 - etl_cca - INFO - EXAP672250421013157 - Leyendo archivo
+2025-04-21 15:40:29 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 15:40:29 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 15:40:29 - etl_cca - INFO - Archivos válidos encontrados: ['EXAP672250421013157', 'EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 15:40:29 - etl_cca - INFO - EXAP672250421013157 - Leyendo archivo
+2025-04-21 15:40:32 - etl_cca - INFO - EXAP672250421013157 - Procesando 167205 datos
+2025-04-21 15:41:12 - etl_cca - INFO - EXAP672250421013157 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-21 15:41:20 - etl_cca - INFO - EXAP672250421013157 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-21 15:42:14 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 15:42:14 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 15:42:14 - etl_cca - INFO - Archivos válidos encontrados: ['EXAP672250421013157', 'EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 15:42:14 - etl_cca - INFO - EXAP672250421013157 - Leyendo archivo
+2025-04-21 15:42:19 - etl_cca - INFO - EXAP672250421013157 - Procesando 167205 datos
+2025-04-21 15:43:05 - etl_cca - INFO - EXAP672250421013157 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-21 15:43:12 - etl_cca - INFO - EXAP672250421013157 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-21 15:44:25 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 15:44:25 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 15:44:25 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 15:44:25 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 15:44:25 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 15:44:27 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:44:29 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:45:43 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 15:45:43 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 15:45:43 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 15:45:43 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 15:45:43 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 15:45:43 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:45:46 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:46:21 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 15:46:21 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 15:46:22 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 15:46:22 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 15:46:22 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 15:46:22 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:46:26 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:46:26 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.34 seg 
+
+2025-04-21 15:46:26 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 15:46:26 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 15:46:26 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 15:46:30 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 15:46:30 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.94 seg 
+
+2025-04-21 15:46:46 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 15:46:46 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 15:46:46 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 15:46:46 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 15:46:46 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 15:46:46 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:46:50 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:46:50 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.73 seg 
+
+2025-04-21 15:46:50 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 15:46:50 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 15:46:51 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 15:46:55 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 15:46:55 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.86 seg 
+
+2025-04-21 15:47:52 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 15:47:52 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 15:47:53 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 15:47:53 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 15:47:53 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 15:47:53 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:47:57 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:48:08 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 15:48:08 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 15:48:08 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 15:48:08 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 15:48:08 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 15:48:09 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:48:12 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:49:34 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 15:49:34 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 15:49:34 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 15:49:34 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 15:49:34 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 15:49:35 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:49:38 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:49:54 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 15:49:54 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 15:49:54 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 15:49:54 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 15:49:55 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 15:49:55 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:49:57 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:51:02 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 15:51:02 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 15:51:03 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 15:51:03 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 15:51:03 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 15:51:03 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:51:06 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:51:06 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.38 seg 
+
+2025-04-21 15:51:06 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 15:51:06 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 15:51:06 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 15:51:09 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 15:51:09 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.08 seg 
+
+2025-04-21 15:59:44 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 15:59:44 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 15:59:45 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 15:59:45 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 15:59:45 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 15:59:45 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 15:59:48 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:00:14 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:00:14 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:00:14 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:00:14 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:00:14 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:00:15 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:00:18 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:00:46 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:00:46 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:00:46 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:00:46 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:00:46 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:00:46 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:00:49 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:02:54 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:02:54 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:02:54 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:02:54 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:02:54 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:02:55 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:02:58 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:03:20 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:03:20 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:03:20 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:03:20 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:03:21 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:03:21 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:03:25 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:03:25 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.33 seg 
+
+2025-04-21 16:03:25 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:03:25 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:03:25 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:03:28 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:03:28 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.19 seg 
+
+2025-04-21 16:04:32 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:04:32 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:04:32 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:04:32 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:04:32 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:04:33 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:04:36 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:04:36 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.75 seg 
+
+2025-04-21 16:04:36 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:04:36 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:04:36 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:04:39 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:04:39 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.23 seg 
+
+2025-04-21 16:05:17 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:05:17 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:05:17 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:05:17 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:05:17 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:05:18 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:05:21 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:05:21 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.79 seg 
+
+2025-04-21 16:05:21 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:05:21 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:05:21 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:05:24 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:05:24 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.26 seg 
+
+2025-04-21 16:07:11 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:07:11 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:07:11 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:07:11 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:07:11 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:07:12 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:07:15 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:07:15 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.72 seg 
+
+2025-04-21 16:07:15 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:07:15 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:07:15 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:07:18 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:07:18 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.25 seg 
+
+2025-04-21 16:12:25 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:12:25 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:12:25 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:12:25 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:12:25 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:12:26 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:12:30 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:12:30 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.77 seg 
+
+2025-04-21 16:12:30 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:12:30 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:12:30 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:12:34 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:12:34 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.17 seg 
+
+2025-04-21 16:12:55 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:12:55 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:12:56 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:12:56 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:12:56 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:12:57 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:13:01 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:13:01 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 5.10 seg 
+
+2025-04-21 16:13:01 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:13:01 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:13:01 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:13:06 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:13:06 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 5.37 seg 
+
+2025-04-21 16:26:34 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:26:34 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:26:34 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:26:34 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:26:34 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:26:35 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:26:39 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:26:39 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total, cargados, dif, estado_proc)
+pyodbc.ProgrammingError: ('Invalid parameter type.  param-index=1 param-type=numpy.datetime64', 'HY105')
+2025-04-21 16:26:39 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.80 seg 
+
+2025-04-21 16:26:39 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:26:39 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:26:39 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:26:43 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:26:43 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total, cargados, dif, estado_proc)
+pyodbc.ProgrammingError: ('Invalid parameter type.  param-index=1 param-type=numpy.datetime64', 'HY105')
+2025-04-21 16:26:43 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.18 seg 
+
+2025-04-21 16:27:37 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:27:37 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:27:37 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:27:37 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:27:37 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:27:37 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:27:40 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:27:40 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.53 seg 
+
+2025-04-21 16:27:40 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:27:40 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:27:41 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:27:46 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:27:46 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 5.73 seg 
+
+2025-04-21 16:29:05 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:29:05 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:29:05 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:29:05 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:29:05 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:29:06 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:29:10 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:29:10 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total, cargados, dif, estado_proc)
+pyodbc.ProgrammingError: ('Invalid parameter type.  param-index=1 param-type=numpy.datetime64', 'HY105')
+2025-04-21 16:29:10 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 5.12 seg 
+
+2025-04-21 16:29:10 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:29:10 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:29:10 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:29:15 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:29:15 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total, cargados, dif, estado_proc)
+pyodbc.ProgrammingError: ('Invalid parameter type.  param-index=1 param-type=numpy.datetime64', 'HY105')
+2025-04-21 16:29:15 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 5.20 seg 
+
+2025-04-21 16:30:25 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:30:25 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:30:25 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:30:25 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:30:25 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:30:26 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:30:29 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:30:29 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total, cargados, dif, estado_proc)
+pyodbc.ProgrammingError: ('Invalid parameter type.  param-index=2 param-type=numpy.int64', 'HY105')
+2025-04-21 16:30:29 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.56 seg 
+
+2025-04-21 16:30:29 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:30:29 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:30:30 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:30:33 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:30:34 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total, cargados, dif, estado_proc)
+pyodbc.ProgrammingError: ('Invalid parameter type.  param-index=2 param-type=numpy.int64', 'HY105')
+2025-04-21 16:30:34 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.03 seg 
+
+2025-04-21 16:31:47 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:31:47 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:31:48 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:31:48 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:31:48 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:31:49 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:31:53 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:31:53 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total, cargados, dif, estado_proc)
+pyodbc.ProgrammingError: ('Invalid parameter type.  param-index=2 param-type=numpy.int64', 'HY105')
+2025-04-21 16:31:53 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 5.08 seg 
+
+2025-04-21 16:31:53 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:31:53 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:31:53 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:31:57 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:31:57 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total, cargados, dif, estado_proc)
+pyodbc.ProgrammingError: ('Invalid parameter type.  param-index=2 param-type=numpy.int64', 'HY105')
+2025-04-21 16:31:57 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.19 seg 
+
+2025-04-21 16:32:18 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:32:18 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:32:19 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:32:19 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:32:19 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:32:19 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:32:23 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:32:23 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total, cargados, dif, estado_proc)
+pyodbc.ProgrammingError: ('Invalid parameter type.  param-index=2 param-type=numpy.int64', 'HY105')
+2025-04-21 16:32:23 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.82 seg 
+
+2025-04-21 16:32:23 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:32:23 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:32:24 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:32:27 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:32:27 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total, cargados, dif, estado_proc)
+pyodbc.ProgrammingError: ('Invalid parameter type.  param-index=2 param-type=numpy.int64', 'HY105')
+2025-04-21 16:32:27 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.00 seg 
+
+2025-04-21 16:33:16 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:33:16 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:33:16 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:33:16 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:33:16 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:33:17 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:33:21 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:33:22 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total, cargados, dif, estado_proc)
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'estado_proc'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]There are more columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement. (109); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2025-04-21 16:33:22 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 5.23 seg 
+
+2025-04-21 16:33:22 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:33:22 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:33:22 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:33:26 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:33:26 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total, cargados, dif, estado_proc)
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'estado_proc'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]There are more columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement. (109); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2025-04-21 16:33:26 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.86 seg 
+
+2025-04-21 16:34:03 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:34:03 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:34:03 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:34:03 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:34:03 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:34:04 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:34:08 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:34:08 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla)
+pyodbc.IntegrityError: ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'fecha_carga', table 'prod_ctrl_contable.ctrl_op_contable.log_tablas_cargadas'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+2025-04-21 16:34:08 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.56 seg 
+
+2025-04-21 16:34:08 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:34:08 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:34:08 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:34:12 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:34:12 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla)
+pyodbc.IntegrityError: ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'fecha_carga', table 'prod_ctrl_contable.ctrl_op_contable.log_tablas_cargadas'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+2025-04-21 16:34:12 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.49 seg 
+
+2025-04-21 16:35:46 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:35:46 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:35:46 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:35:46 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:35:46 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:35:47 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:35:51 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:35:51 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.92 seg 
+
+2025-04-21 16:35:51 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:35:51 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:35:51 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:35:55 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:35:55 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.45 seg 
+
+2025-04-21 16:36:27 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:36:27 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:36:27 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:36:27 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:36:27 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:36:27 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:36:34 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:36:34 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha)
+pyodbc.ProgrammingError: ('The SQL contains 1 parameter markers, but 2 parameters were supplied', 'HY000')
+2025-04-21 16:36:34 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 7.00 seg 
+
+2025-04-21 16:36:34 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:36:34 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:36:34 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:36:41 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:36:41 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha)
+pyodbc.ProgrammingError: ('The SQL contains 1 parameter markers, but 2 parameters were supplied', 'HY000')
+2025-04-21 16:36:41 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 6.89 seg 
+
+2025-04-21 16:37:25 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:37:25 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:37:25 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:37:25 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:37:25 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:37:26 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:37:30 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:37:30 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha)
+pyodbc.ProgrammingError: ('The SQL contains 1 parameter markers, but 2 parameters were supplied', 'HY000')
+2025-04-21 16:37:30 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.68 seg 
+
+2025-04-21 16:37:30 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:37:30 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:37:30 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:37:34 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:37:34 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha)
+pyodbc.ProgrammingError: ('The SQL contains 1 parameter markers, but 2 parameters were supplied', 'HY000')
+2025-04-21 16:37:34 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.32 seg 
+
+2025-04-21 16:38:01 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:38:01 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:38:02 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:38:02 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:38:02 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:38:02 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:38:06 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:38:06 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.31 seg 
+
+2025-04-21 16:38:06 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:38:06 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:38:06 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:38:10 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:38:10 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.25 seg 
+
+2025-04-21 16:41:38 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:41:38 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:41:38 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:41:38 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:41:38 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:41:39 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:41:44 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:41:44 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 5.50 seg 
+
+2025-04-21 16:41:44 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:41:44 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:41:44 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:41:49 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:41:49 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.97 seg 
+
+2025-04-21 16:42:23 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:42:23 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:42:23 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:42:23 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:42:23 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:42:24 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:42:29 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:42:29 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 5.71 seg 
+
+2025-04-21 16:42:29 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:42:29 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:42:29 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:42:33 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:42:33 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.38 seg 
+
+2025-04-21 16:43:44 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:43:44 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:43:44 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:43:44 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:43:44 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:43:48 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:43:52 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:43:52 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total)
+pyodbc.ProgrammingError: ('Invalid parameter type.  param-index=2 param-type=numpy.int64', 'HY105')
+2025-04-21 16:43:52 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 7.90 seg 
+
+2025-04-21 16:43:52 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:43:52 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:43:53 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:43:58 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:43:58 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total)
+pyodbc.ProgrammingError: ('Invalid parameter type.  param-index=2 param-type=numpy.int64', 'HY105')
+2025-04-21 16:43:58 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 5.26 seg 
+
+2025-04-21 16:52:29 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:52:29 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:52:29 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:52:29 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:52:29 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:52:30 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:52:34 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:52:34 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 68, in insertTablaLog
+    df = pd.DataFrame(dic, index= [0] , data_type=data_type)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DataFrame.__init__() got an unexpected keyword argument 'data_type'
+2025-04-21 16:52:34 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 4.16 seg 
+
+2025-04-21 16:52:34 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:52:34 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:52:34 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:52:37 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:52:37 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 68, in insertTablaLog
+    df = pd.DataFrame(dic, index= [0] , data_type=data_type)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DataFrame.__init__() got an unexpected keyword argument 'data_type'
+2025-04-21 16:52:37 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.72 seg 
+
+2025-04-21 16:58:00 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 16:58:00 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 16:58:00 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 16:58:00 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 16:58:00 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 16:58:01 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:58:03 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 16:58:03 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 68, in insertTablaLog
+    df = pd.DataFrame(dic, index= [0] , type=data_type)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DataFrame.__init__() got an unexpected keyword argument 'type'
+2025-04-21 16:58:03 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.14 seg 
+
+2025-04-21 16:58:03 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 16:58:03 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 16:58:03 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:58:06 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 16:58:06 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 68, in insertTablaLog
+    df = pd.DataFrame(dic, index= [0] , type=data_type)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DataFrame.__init__() got an unexpected keyword argument 'type'
+2025-04-21 16:58:06 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.82 seg 
+
+2025-04-21 17:00:49 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:00:49 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:00:49 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:00:49 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:00:49 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:00:50 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:00:53 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:00:53 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 65, in insertTablaLog
+    df = pd.DataFrame(dic, index= [0] , type=data_type)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DataFrame.__init__() got an unexpected keyword argument 'type'
+2025-04-21 17:00:53 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.25 seg 
+
+2025-04-21 17:00:53 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:00:53 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:00:53 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:00:55 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:00:55 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 65, in insertTablaLog
+    df = pd.DataFrame(dic, index= [0] , type=data_type)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DataFrame.__init__() got an unexpected keyword argument 'type'
+2025-04-21 17:00:55 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.67 seg 
+
+2025-04-21 17:02:34 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:02:34 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:02:34 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:02:34 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:02:34 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:02:35 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:02:38 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:02:38 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 82, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total)
+pyodbc.ProgrammingError: ('Invalid parameter type.  param-index=2 param-type=numpy.int32', 'HY105')
+2025-04-21 17:02:38 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.44 seg 
+
+2025-04-21 17:02:38 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:02:38 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:02:38 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:02:41 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:02:41 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 82, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total)
+pyodbc.ProgrammingError: ('Invalid parameter type.  param-index=2 param-type=numpy.int32', 'HY105')
+2025-04-21 17:02:41 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.77 seg 
+
+2025-04-21 17:03:30 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:03:30 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:03:30 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:03:30 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:03:30 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:03:30 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:03:33 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:03:33 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.19 seg 
+
+2025-04-21 17:03:33 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:03:33 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:03:33 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:03:36 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:03:36 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.73 seg 
+
+2025-04-21 17:05:32 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:05:32 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:05:33 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:05:33 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:05:33 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:05:33 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:05:36 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:05:36 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 81, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'estado_proc'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2025-04-21 17:05:36 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.07 seg 
+
+2025-04-21 17:05:36 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:05:36 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:05:36 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:05:38 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:05:38 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 81, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_tablas']} (nombre_tabla, fecha, cantidad_total
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'estado_proc'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2025-04-21 17:05:38 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.72 seg 
+
+2025-04-21 17:06:02 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:06:02 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:06:02 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:06:02 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:06:02 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:06:02 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:06:04 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:06:04 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.84 seg 
+
+2025-04-21 17:06:04 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:06:05 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:06:05 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:06:07 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:06:07 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.92 seg 
+
+2025-04-21 17:11:53 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:11:53 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:11:53 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:11:53 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:11:53 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:11:54 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:11:57 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:11:57 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 75, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_archivo, fecha, cantidad_total
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'fecha'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2025-04-21 17:11:57 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.20 seg 
+
+2025-04-21 17:11:57 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:11:57 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:11:57 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:11:59 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:11:59 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 75, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_archivo, fecha, cantidad_total
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'fecha'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2025-04-21 17:11:59 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.66 seg 
+
+2025-04-21 17:13:19 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:13:19 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:13:19 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:13:19 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:13:19 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:13:19 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:13:22 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:13:22 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 75, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_archivo, fecha_archivo, cantidad_total
+pyodbc.IntegrityError: ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'fecha_carga', table 'prod_ctrl_contable.ctrl_op_contable.log_archivos_cargados'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+2025-04-21 17:13:22 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.03 seg 
+
+2025-04-21 17:13:22 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:13:22 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:13:22 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:13:24 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:13:24 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 75, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_archivo, fecha_archivo, cantidad_total
+pyodbc.IntegrityError: ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'fecha_carga', table 'prod_ctrl_contable.ctrl_op_contable.log_archivos_cargados'; column does not allow nulls. INSERT fails. (515) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+2025-04-21 17:13:24 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.75 seg 
+
+2025-04-21 17:15:10 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:15:10 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:15:10 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:15:10 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:15:10 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:15:10 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:15:13 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:15:13 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 75, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_archivo, fecha_archivo, cantidad_total
+pyodbc.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement. (110) (SQLExecDirectW); [21S01] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)')
+2025-04-21 17:15:13 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.24 seg 
+
+2025-04-21 17:15:13 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:15:13 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:15:13 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:15:16 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:15:16 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 75, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_archivo, fecha_archivo, cantidad_total
+pyodbc.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement. (110) (SQLExecDirectW); [21S01] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)')
+2025-04-21 17:15:16 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.33 seg 
+
+2025-04-21 17:29:19 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:29:19 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:29:20 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:29:20 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:29:20 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:29:21 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:29:25 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:29:25 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 75, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_archivo, fecha_archivo, cantidad_total
+pyodbc.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement. (110) (SQLExecDirectW); [21S01] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)')
+2025-04-21 17:29:25 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 5.52 seg 
+
+2025-04-21 17:29:25 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:29:25 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:29:26 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:29:28 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:29:28 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 75, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_archivo, fecha_archivo, cantidad_total
+pyodbc.Error: ('21S01', '[21S01] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement. (110) (SQLExecDirectW); [21S01] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)')
+2025-04-21 17:29:28 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.08 seg 
+
+2025-04-21 17:31:27 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:31:27 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:31:27 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:31:27 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:31:27 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:31:27 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:31:30 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:31:30 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 75, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_archivo, fecha_archivo, cantidad_total
+pyodbc.DataError: ('22007', '[22007] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The conversion of a nvarchar data type to a datetime data type resulted in an out-of-range value. (242) (SQLExecDirectW); [22007] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+2025-04-21 17:31:30 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.04 seg 
+
+2025-04-21 17:31:30 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:31:30 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:31:30 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:31:32 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:31:32 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 75, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_archivo, fecha_archivo, cantidad_total
+pyodbc.DataError: ('22007', '[22007] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The conversion of a nvarchar data type to a datetime data type resulted in an out-of-range value. (242) (SQLExecDirectW); [22007] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+2025-04-21 17:31:32 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.56 seg 
+
+2025-04-21 17:33:06 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:33:06 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:33:06 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:33:06 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:33:06 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:33:06 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:33:09 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:33:09 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 75, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_archivo, fecha_archivo, cantidad_total
+pyodbc.ProgrammingError: ('The SQL contains 6 parameter markers, but 7 parameters were supplied', 'HY000')
+2025-04-21 17:33:09 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.03 seg 
+
+2025-04-21 17:33:09 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:33:09 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:33:09 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:33:12 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:33:12 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 75, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_archivo, fecha_archivo, cantidad_total
+pyodbc.ProgrammingError: ('The SQL contains 6 parameter markers, but 7 parameters were supplied', 'HY000')
+2025-04-21 17:33:12 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.53 seg 
+
+2025-04-21 17:35:00 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:35:00 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:35:00 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:35:00 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:35:00 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:35:01 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:35:03 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:35:03 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 78, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_archivo, fecha_archivo, cantidad_total
+pyodbc.DataError: ('22007', '[22007] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The conversion of a nvarchar data type to a datetime data type resulted in an out-of-range value. (242) (SQLExecDirectW); [22007] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+2025-04-21 17:35:03 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.07 seg 
+
+2025-04-21 17:35:03 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:35:03 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:35:04 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:35:06 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:35:06 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 78, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_archivo, fecha_archivo, cantidad_total
+pyodbc.DataError: ('22007', '[22007] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The conversion of a nvarchar data type to a datetime data type resulted in an out-of-range value. (242) (SQLExecDirectW); [22007] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)')
+2025-04-21 17:35:06 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.72 seg 
+
+2025-04-21 17:38:56 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:38:56 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:38:56 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:38:56 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:38:56 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:38:56 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:38:59 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:38:59 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 72, in insertTablaLog
+    df_tablas.to_csv(f"{paths['repo_csv']}/{df_tablas['nombre_tabla'].values[0]}.csv", index=False, sep=';')
+  File "C:\Program Files\Python311\Lib\site-packages\pandas\core\generic.py", line 3902, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\site-packages\pandas\io\formats\format.py", line 1152, in to_csv
+    csv_formatter.save()
+  File "C:\Program Files\Python311\Lib\site-packages\pandas\io\formats\csvs.py", line 247, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\site-packages\pandas\io\common.py", line 863, in get_handle
+    handle = open(
+             ^^^^^
+PermissionError: [Errno 13] Permission denied: 'D:\\Users\\jcarrion.externo\\Documents\\Python Scripts(Prod)\\ETL_Carga_CCA-test\\modulos\\datos\\archivocsv\\/[prod_ctrl_contable].[ft_cca_rechazadas].csv'
+2025-04-21 17:38:59 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.03 seg 
+
+2025-04-21 17:38:59 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:38:59 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:38:59 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:39:02 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:39:02 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 93, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_tabla, fecha, cantidad_total
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'nombre_tabla'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'fecha'. (207); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2025-04-21 17:39:02 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.86 seg 
+
+2025-04-21 17:39:17 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:39:17 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:39:17 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:39:17 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:39:17 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:39:17 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:39:20 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:39:20 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 93, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_tabla, fecha, cantidad_total
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'nombre_tabla'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'fecha'. (207); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2025-04-21 17:39:20 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.00 seg 
+
+2025-04-21 17:39:20 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:39:20 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:39:20 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:39:23 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:39:23 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 79, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_archivo, fecha_archivo, cantidad_total
+pyodbc.IntegrityError: ('23000', "[23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Violation of PRIMARY KEY constraint 'id_log'. Cannot insert duplicate key in object 'ctrl_op_contable.log_archivos_cargados'. The duplicate key value is ([prod_ctrl_contable].[ft_cca_reversadas], Apr 21 2025  5:39PM). (2627) (SQLExecDirectW); [23000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated. (3621)")
+2025-04-21 17:39:23 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.01 seg 
+
+2025-04-21 17:40:15 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:40:15 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:40:15 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:40:15 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:40:15 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:40:15 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:40:18 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:40:18 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 93, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_tabla, fecha, cantidad_total
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'nombre_tabla'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'fecha'. (207); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2025-04-21 17:40:18 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.06 seg 
+
+2025-04-21 17:40:18 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:40:18 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:40:18 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:40:20 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:40:20 - etl_cca - ERROR - Error al insertar en tabla log_tablas
+Traceback (most recent call last):
+  File "d:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\log_cargas\log_config.py", line 93, in insertTablaLog
+    cursor.execute(f'''insert into {TABLAS_SQL['log_archivos']} (nombre_tabla, fecha, cantidad_total
+pyodbc.ProgrammingError: ('42S22', "[42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'nombre_tabla'. (207) (SQLExecDirectW); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Invalid column name 'fecha'. (207); [42S22] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Statement(s) could not be prepared. (8180)")
+2025-04-21 17:40:20 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.67 seg 
+
+2025-04-21 17:41:26 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:41:26 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:41:26 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:41:26 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:41:26 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:41:26 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:41:29 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:41:29 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_rechazadas]
+2025-04-21 17:41:29 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.02 seg 
+
+2025-04-21 17:41:29 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:41:29 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:41:29 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:41:32 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:41:32 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_reversadas]
+2025-04-21 17:41:32 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.63 seg 
+
+2025-04-21 17:42:03 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:42:03 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:42:03 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:42:03 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:42:03 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:42:03 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:42:06 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:42:06 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_rechazadas]
+2025-04-21 17:42:06 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.94 seg 
+
+2025-04-21 17:42:06 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:42:06 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:42:06 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:42:09 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:42:09 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_reversadas]
+2025-04-21 17:42:09 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.63 seg 
+
+2025-04-21 17:44:14 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:44:14 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:44:14 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:44:14 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:44:14 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:44:14 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:44:17 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:44:17 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_rechazadas]
+2025-04-21 17:44:17 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.97 seg 
+
+2025-04-21 17:44:17 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:44:17 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:44:17 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:44:20 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:44:20 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_reversadas]
+2025-04-21 17:44:20 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.69 seg 
+
+2025-04-21 17:45:19 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:45:19 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:45:19 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:45:19 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:45:19 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:45:19 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:45:22 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:45:22 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_rechazadas]
+2025-04-21 17:45:22 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.84 seg 
+
+2025-04-21 17:45:22 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:45:22 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:45:22 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:45:24 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:45:24 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_reversadas]
+2025-04-21 17:45:24 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.70 seg 
+
+2025-04-21 17:46:44 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-21 17:46:44 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-21 17:46:44 - etl_cca - INFO - Archivos válidos encontrados: ['EXRE672250421013158', 'EXRV672250421013158']
+2025-04-21 17:46:44 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-21 17:46:44 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-21 17:46:45 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:46:47 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-21 17:46:47 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_rechazadas]
+2025-04-21 17:46:47 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.88 seg 
+
+2025-04-21 17:46:47 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-21 17:46:47 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-21 17:46:47 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:46:50 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-21 17:46:50 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_reversadas]
+2025-04-21 17:46:50 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.75 seg 
+
+2025-04-21 17:57:49 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-22 09:47:33 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-22 09:47:33 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-22 09:47:33 - etl_cca - INFO - Archivos válidos encontrados: []
+2025-04-22 09:49:16 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-22 09:49:16 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-22 09:49:16 - etl_cca - INFO - Archivos válidos encontrados: ['EXAP672250416145408', 'EXAP672250417143941', 'EXRE672250416013046', 'EXRE672250416145409', 'EXRE672250417012443', 'EXRE672250417143941', 'EXRV672250416013046', 'EXRV672250416145409', 'RBAP672250416100000', 'RBAP672250416150000', 'RBRE672250416100000']
+2025-04-22 09:49:16 - etl_cca - INFO - EXAP672250416145408 - Leyendo archivo
+2025-04-22 09:49:17 - etl_cca - INFO - EXAP672250416145408 - Procesando 28245 datos
+2025-04-22 09:49:28 - etl_cca - INFO - EXAP672250416145408 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-22 09:49:30 - etl_cca - INFO - EXAP672250416145408 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-22 09:49:30 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_aprobadas]
+2025-04-22 09:49:30 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 13.51 seg 
+
+2025-04-22 09:49:30 - etl_cca - INFO - EXAP672250417143941 - Leyendo archivo
+2025-04-22 09:49:31 - etl_cca - INFO - EXAP672250417143941 - Procesando 37027 datos
+2025-04-22 09:49:39 - etl_cca - INFO - EXAP672250417143941 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-22 09:49:42 - etl_cca - INFO - EXAP672250417143941 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-22 09:49:42 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_aprobadas]
+2025-04-22 09:49:42 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 11.04 seg 
+
+2025-04-22 09:49:42 - etl_cca - INFO - EXRE672250416013046 - Leyendo archivo
+2025-04-22 09:49:42 - etl_cca - INFO - EXRE672250416013046 - Procesando 1835 datos
+2025-04-22 09:49:43 - etl_cca - INFO - EXRE672250416013046 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:49:44 - etl_cca - INFO - EXRE672250416013046 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:49:44 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_rechazadas]
+2025-04-22 09:49:44 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.34 seg 
+
+2025-04-22 09:49:44 - etl_cca - INFO - EXRE672250416145409 - Leyendo archivo
+2025-04-22 09:49:44 - etl_cca - INFO - EXRE672250416145409 - Procesando 515 datos
+2025-04-22 09:49:45 - etl_cca - INFO - EXRE672250416145409 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:49:46 - etl_cca - INFO - EXRE672250416145409 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:49:46 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_rechazadas]
+2025-04-22 09:49:46 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 1.80 seg 
+
+2025-04-22 09:49:46 - etl_cca - INFO - EXRE672250417012443 - Leyendo archivo
+2025-04-22 09:49:46 - etl_cca - INFO - EXRE672250417012443 - Procesando 700 datos
+2025-04-22 09:49:47 - etl_cca - INFO - EXRE672250417012443 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:49:48 - etl_cca - INFO - EXRE672250417012443 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:49:48 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_rechazadas]
+2025-04-22 09:49:48 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 1.83 seg 
+
+2025-04-22 09:49:48 - etl_cca - INFO - EXRE672250417143941 - Leyendo archivo
+2025-04-22 09:49:48 - etl_cca - INFO - EXRE672250417143941 - Procesando 754 datos
+2025-04-22 09:49:48 - etl_cca - INFO - EXRE672250417143941 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:49:50 - etl_cca - INFO - EXRE672250417143941 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:49:50 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_rechazadas]
+2025-04-22 09:49:50 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 1.79 seg 
+
+2025-04-22 09:49:50 - etl_cca - INFO - EXRV672250416013046 - Leyendo archivo
+2025-04-22 09:49:50 - etl_cca - INFO - EXRV672250416013046 - Procesando 4136 datos
+2025-04-22 09:49:52 - etl_cca - INFO - EXRV672250416013046 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-22 09:49:53 - etl_cca - INFO - EXRV672250416013046 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-22 09:49:53 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_reversadas]
+2025-04-22 09:49:53 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 3.50 seg 
+
+2025-04-22 09:49:53 - etl_cca - INFO - EXRV672250416145409 - Leyendo archivo
+2025-04-22 09:49:54 - etl_cca - INFO - EXRV672250416145409 - Procesando 148 datos
+2025-04-22 09:49:54 - etl_cca - INFO - EXRV672250416145409 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-22 09:49:55 - etl_cca - INFO - EXRV672250416145409 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-22 09:49:55 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_reversadas]
+2025-04-22 09:49:55 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 1.32 seg 
+
+2025-04-22 09:49:55 - etl_cca - INFO - RBAP672250416100000 - Leyendo archivo
+2025-04-22 09:49:55 - etl_cca - INFO - RBAP672250416150000 - Leyendo archivo
+2025-04-22 09:49:55 - etl_cca - INFO - RBRE672250416100000 - Leyendo archivo
+2025-04-22 09:49:55 - etl_cca - INFO - RBRE672250416100000 - Procesando 139 datos
+2025-04-22 09:49:55 - etl_cca - INFO - RBRE672250416100000 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:49:56 - etl_cca - INFO - RBRE672250416100000 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:49:56 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_rechazadas]
+2025-04-22 09:49:56 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 1.55 seg 
+
+2025-04-22 09:55:39 - etl_cca - INFO - Iniciando lectura de archivos
+2025-04-22 09:55:39 - etl_cca - INFO - Inicializando CCAProcessor con directorios:
+Entrada: D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Carga_CCA-test\modulos\datos\archivotxt
+
+2025-04-22 09:55:39 - etl_cca - INFO - Archivos válidos encontrados: ['EXAP672250416145408', 'EXAP672250417143941', 'EXRE672250416013046', 'EXRE672250416145409', 'EXRE672250417012443', 'EXRE672250417143941', 'EXRE672250421013158', 'EXRV672250416013046', 'EXRV672250416145409', 'EXRV672250421013158', 'RBAP672250416100000', 'RBAP672250416150000', 'RBRE672250416100000']
+2025-04-22 09:55:39 - etl_cca - INFO - EXAP672250416145408 - Leyendo archivo
+2025-04-22 09:55:40 - etl_cca - INFO - EXAP672250416145408 - Procesando 28245 datos
+2025-04-22 09:55:45 - etl_cca - INFO - EXAP672250416145408 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-22 09:55:47 - etl_cca - INFO - EXAP672250416145408 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-22 09:55:47 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_aprobadas]
+2025-04-22 09:55:47 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 7.01 seg 
+
+2025-04-22 09:55:47 - etl_cca - INFO - EXAP672250417143941 - Leyendo archivo
+2025-04-22 09:55:47 - etl_cca - INFO - EXAP672250417143941 - Procesando 37027 datos
+2025-04-22 09:55:53 - etl_cca - INFO - EXAP672250417143941 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-22 09:55:55 - etl_cca - INFO - EXAP672250417143941 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_aprobadas]
+2025-04-22 09:55:55 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_aprobadas]
+2025-04-22 09:55:55 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 7.88 seg 
+
+2025-04-22 09:55:55 - etl_cca - INFO - EXRE672250416013046 - Leyendo archivo
+2025-04-22 09:55:55 - etl_cca - INFO - EXRE672250416013046 - Procesando 1835 datos
+2025-04-22 09:55:56 - etl_cca - INFO - EXRE672250416013046 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:55:57 - etl_cca - INFO - EXRE672250416013046 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:55:57 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_rechazadas]
+2025-04-22 09:55:57 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 1.44 seg 
+
+2025-04-22 09:55:57 - etl_cca - INFO - EXRE672250416145409 - Leyendo archivo
+2025-04-22 09:55:57 - etl_cca - INFO - EXRE672250416145409 - Procesando 515 datos
+2025-04-22 09:55:57 - etl_cca - INFO - EXRE672250416145409 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:55:58 - etl_cca - INFO - EXRE672250416145409 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:55:58 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_rechazadas]
+2025-04-22 09:55:58 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 1.29 seg 
+
+2025-04-22 09:55:58 - etl_cca - INFO - EXRE672250417012443 - Leyendo archivo
+2025-04-22 09:55:58 - etl_cca - INFO - EXRE672250417012443 - Procesando 700 datos
+2025-04-22 09:55:58 - etl_cca - INFO - EXRE672250417012443 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:56:00 - etl_cca - INFO - EXRE672250417012443 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:56:00 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_rechazadas]
+2025-04-22 09:56:00 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 1.61 seg 
+
+2025-04-22 09:56:00 - etl_cca - INFO - EXRE672250417143941 - Leyendo archivo
+2025-04-22 09:56:00 - etl_cca - INFO - EXRE672250417143941 - Procesando 754 datos
+2025-04-22 09:56:00 - etl_cca - INFO - EXRE672250417143941 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:56:02 - etl_cca - INFO - EXRE672250417143941 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:56:02 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_rechazadas]
+2025-04-22 09:56:02 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 1.88 seg 
+
+2025-04-22 09:56:02 - etl_cca - INFO - EXRE672250421013158 - Leyendo archivo
+2025-04-22 09:56:02 - etl_cca - INFO - EXRE672250421013158 - Procesando 3000 datos
+2025-04-22 09:56:03 - etl_cca - INFO - EXRE672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:56:03 - etl_cca - INFO - EXRE672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:56:03 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_rechazadas]
+2025-04-22 09:56:03 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 1.71 seg 
+
+2025-04-22 09:56:03 - etl_cca - INFO - EXRV672250416013046 - Leyendo archivo
+2025-04-22 09:56:04 - etl_cca - INFO - EXRV672250416013046 - Procesando 4136 datos
+2025-04-22 09:56:04 - etl_cca - INFO - EXRV672250416013046 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-22 09:56:06 - etl_cca - INFO - EXRV672250416013046 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-22 09:56:06 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_reversadas]
+2025-04-22 09:56:06 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.13 seg 
+
+2025-04-22 09:56:06 - etl_cca - INFO - EXRV672250416145409 - Leyendo archivo
+2025-04-22 09:56:06 - etl_cca - INFO - EXRV672250416145409 - Procesando 148 datos
+2025-04-22 09:56:06 - etl_cca - INFO - EXRV672250416145409 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-22 09:56:08 - etl_cca - INFO - EXRV672250416145409 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-22 09:56:08 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_reversadas]
+2025-04-22 09:56:08 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 2.00 seg 
+
+2025-04-22 09:56:08 - etl_cca - INFO - EXRV672250421013158 - Leyendo archivo
+2025-04-22 09:56:08 - etl_cca - INFO - EXRV672250421013158 - Procesando 884 datos
+2025-04-22 09:56:08 - etl_cca - INFO - EXRV672250421013158 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-22 09:56:08 - etl_cca - INFO - EXRV672250421013158 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_reversadas]
+2025-04-22 09:56:08 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_reversadas]
+2025-04-22 09:56:08 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 0.67 seg 
+
+2025-04-22 09:56:08 - etl_cca - INFO - RBAP672250416100000 - Leyendo archivo
+2025-04-22 09:56:08 - etl_cca - INFO - RBAP672250416150000 - Leyendo archivo
+2025-04-22 09:56:08 - etl_cca - INFO - RBRE672250416100000 - Leyendo archivo
+2025-04-22 09:56:08 - etl_cca - INFO - RBRE672250416100000 - Procesando 139 datos
+2025-04-22 09:56:08 - etl_cca - INFO - RBRE672250416100000 - Datos insertados en [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:56:10 - etl_cca - INFO - RBRE672250416100000 - Procedimientos almacenados ejecutados para [prod_ctrl_contable].[t_paso_ctr_op].[ft_cca_rechazadas]
+2025-04-22 09:56:10 - etl_cca - INFO - Insertado en tabla log_tablas: [prod_ctrl_contable].[ft_cca_rechazadas]
+2025-04-22 09:56:10 - etl_cca - INFO - Tiempo de ejecución de insertar_batch: 1.74 seg 
+
+2025-04-22 16:10:31 - etl_cca - INFO - Iniciando conexión a la base de datos SQL
+2025-04-22 16:11:14 - etl_cca - ERROR - Error de conexión SQL
+Traceback (most recent call last):
+  File "D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Audit-trans\modulos\conexionSQL\conexionBD2.py", line 39, in conexion_produccion
+    connection = pyodbc.connect(
+                 ^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08S01', '[08S01] [IBM][Controlador ODBC de System i Access]Anomalía de enlace de comunicaciones. comm rc=10060 - CWBCO1048 - Se ha producido un bloqueo del cortafuegos o se ha sobrepasado el tiempo de espera al intentar conectarse a System i (10060) (SQLDriverConnect)')
+2025-04-22 16:28:19 - etl_cca - INFO - Iniciando conexión a la base de datos SQL
+2025-04-22 16:29:01 - etl_cca - ERROR - Error de conexión SQL
+Traceback (most recent call last):
+  File "D:\Users\jcarrion.externo\Documents\Python Scripts(Prod)\ETL_Audit-trans\modulos\conexionSQL\conexionBD2.py", line 39, in conexion_produccion
+    connection = pyodbc.connect(
+                 ^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('08S01', '[08S01] [IBM][Controlador ODBC de System i Access]Anomalía de enlace de comunicaciones. comm rc=10060 - CWBCO1048 - Se ha producido un bloqueo del cortafuegos o se ha sobrepasado el tiempo de espera al intentar conectarse a System i (10060) (SQLDriverConnect)')
+2025-04-22 16:31:57 - etl_cca - INFO - Iniciando conexión a la base de datos SQL
+2025-04-22 16:31:58 - etl_cca - INFO - Conexión a la base de datos Produccion 10.21.60.70
+2025-04-22 16:33:00 - etl_cca - INFO - Iniciando conexión a la base de datos SQL
+2025-04-22 16:33:00 - etl_cca - INFO - Conexión a la base de datos Produccion 10.21.60.70
+2025-04-22 16:33:53 - etl_cca - INFO - Iniciando conexión a la base de datos SQL
+2025-04-22 16:33:53 - etl_cca - INFO - Conexión a la base de datos Produccion 10.21.60.70
+2025-04-22 16:34:22 - etl_cca - INFO - Iniciando conexión a la base de datos SQL
+2025-04-22 16:34:23 - etl_cca - INFO - Conexión a la base de datos Produccion 10.21.60.70
+2025-04-22 16:58:27 - etl_cca - INFO - Iniciando conexión a la base de datos SQL
+2025-04-22 16:59:05 - etl_cca - INFO - Iniciando conexión a la base de datos SQL
+2025-04-22 17:07:03 - etl_cca - INFO - Iniciando conexión a la base de datos SQL
+2025-04-22 17:08:49 - etl_cca - INFO - Iniciando conexión a la base de datos SQL
+2025-04-22 17:10:30 - etl_cca - INFO - Iniciando conexión a la base de datos SQL
+2025-04-22 17:16:13 - etl_cca - INFO - Iniciando conexión a la base de datos SQL
+2025-04-22 17:30:03 - etl_cca - INFO - Iniciando conexión a la base de datos SQL
+2025-04-22 17:30:35 - etl_cca - INFO - Iniciando conexión a la base de datos SQL
+2025-04-22 17:30:36 - etl_cca - INFO - Conexión a la base de datos Contingencia 10.21.60.47
+2025-04-22 17:30:36 - etl_cca - INFO - Iniciando conexión a la base de datos SQL
+2025-04-22 17:30:36 - etl_cca - INFO - Conexión a la base de datos Contingencia 10.21.60.47

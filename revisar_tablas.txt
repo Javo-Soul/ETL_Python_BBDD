@@ -1,0 +1,37 @@
+use prod_ctrl_contable
+-----------------------------------------------------------
+SELECT archivo_origen,count(*) as Q,sum(Monto_Transaccion) as Monto_Transaccion,Fecha_ts
+,'ft_cca_aprobadas' as tabla
+FROM [prod_ctrl_contable].[ctrl_op_contable].[ft_cca_aprobadas]
+where archivo_origen in ('EXAP672250417143941','EXAP672250421013157','EXAP672250416145408')
+group by archivo_origen,Fecha_ts
+
+union all
+------------------------------------------------------------
+------------------------------------------------------------
+SELECT archivo_origen,count(*) as Q,sum(Monto_Transaccion) as Monto_Transaccion,Fecha_ts
+,'ft_cca_reversadas' as tabla
+FROM [prod_ctrl_contable].[ctrl_op_contable].[ft_cca_reversadas]
+where archivo_origen in ('EXRV672250416013046','EXRV672250416145409','EXRV672250421013158')
+group by archivo_origen,Fecha_ts
+
+union all
+------------------------------------------------------------
+------------------------------------------------------------
+SELECT archivo_origen,count(*) as Q,sum(Monto_Transaccion) as Monto_Transaccion,Fecha_ts
+,'ft_cca_rechazadas' as tabla
+FROM [prod_ctrl_contable].[ctrl_op_contable].[ft_cca_rechazadas]
+where archivo_origen in ('EXRE672250416013046','EXRE672250421013158','RBRE672250416100000',
+'EXRE672250417012443','EXRE672250416145409','EXRE672250417143941')
+group by archivo_origen,Fecha_ts
+
+select * from [prod_ctrl_contable].[ctrl_op_contable].[log_archivos_cargados]
+select * from [prod_ctrl_contable].[ctrl_op_contable].[log_tablas_cargadas]
+
+--truncate table [prod_ctrl_contable].[ctrl_op_contable].[ft_cca_aprobadas]
+--truncate table [prod_ctrl_contable].[ctrl_op_contable].[ft_cca_reversadas]
+--truncate table [prod_ctrl_contable].[ctrl_op_contable].[ft_cca_rechazadas]
+--truncate table [prod_ctrl_contable].[ctrl_op_contable].[log_archivos_cargados]
+--truncate table [prod_ctrl_contable].[ctrl_op_contable].[log_tablas_cargadas]
+
+
