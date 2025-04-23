@@ -16,7 +16,6 @@ bd_config = {
 }
 #----------------------------------------
 # Configuración del logger
-logger.info("Iniciando conexión a la base de datos SQL")
 #----------------------------------------
 
 class conexionSQL:
@@ -42,10 +41,9 @@ class conexionSQL:
                 uid    = usuario,
                 pwd    = password)
 
-            logger.info(f"Conexión a la base de datos Produccion {Host}")
+            logger.info(f"Conexión a la base de datos Produccion .70 ")
         except Exception as e:
             logger.error("Error de conexión SQL", exc_info=True)
-            print(e)
 
         return connection
 
@@ -60,9 +58,10 @@ class conexionSQL:
 
             connection_string = f'''Driver=SQL Anywhere 17;UID={user};PWD={password};DatabaseName={database};ServerName=acuarius_iws;Host=datawarehouse-01:2638'''
             connection = pyodbc.connect(connection_string)
-            logger.info(f"Conexión a la base de datos IWS {database}")
+
+            logger.info(f"Conexión a la base de datos IWS")
         except Exception as e:
-            logger.error("Error de conexión SQL", exc_info=True)
+            logger.error("Error de conexión a IWS", exc_info=True)
 
         return connection
 
@@ -80,10 +79,10 @@ class conexionSQL:
                 system = Host,
                 uid = usuario,
                 pwd = password)
-            logger.info(f"Conexión a la base de datos Contingencia {Host}")
+            logger.info(f"Conexión a la base de datos Contingencia .47")
 
         except Exception as e:
-            logger.error("Error de conexión SQL", exc_info=True)
+            logger.error("Error de conexión a Servidor Contingencia", exc_info=True)
 
         return connection
 
@@ -94,7 +93,9 @@ class conexionSQL:
             server = self.localhost
             database = self.localDatabase
             conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';Trusted_Connection=yes')
+
             logger.info(f"Conexión a la base de datos SQL Server {server}")
+
         except Exception as e:
             logger.error("Error de conexión SQL", exc_info=True)
 
@@ -129,24 +130,20 @@ class conexionSQL:
                 response = ['Accion no válida']
 
         except pyodbc.Error as ex:
-            print(f"SQL Error: {ex}")
-            logger.error("Error general en operación SQL", exc_info=True)
+            logger.error(f"Error general en operación SQL", exc_info=True)
             response = ex
 
         except Exception as e:
-            print(f"Error general: {e}")
+            logger.error("Error general en operación SQL", exc_info=True)
             response = e
 
         finally:
             try:
-                conexion.commit()
-                conexion.close()
+                if conexion:
+                    conexion.commit()
+                    conexion.close()
             except:
                 pass
 
         return response
-
-bd = conexionSQL()
-produccion = bd.conexion_contingencia()
-print(produccion)
 
