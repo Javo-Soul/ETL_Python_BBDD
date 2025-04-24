@@ -1,36 +1,40 @@
 from datetime import datetime, timedelta
-from modulos.datos import tablaTefabm as datos
 from modulos.repository.sql_repository import SQLRepository
 from modulos.conexionSQL.conexionBD2 import conexionSQL
-########################################################
-fecha_hoy = datetime.now()
-fecha_consulta = fecha_hoy.date()
 
+########################################################
+from modulos.datos import tablaTefabm as datosTefabm
+from modulos.datos import tablaTrans as datosTrans
+from modulos.datos import tablaAudit as datosAudit
+########################################################
 def main():
-    # 1. Configurar el repository
+    fecha = datetime.now()
+    fecha_consulta = fecha.date()
+    #-- 1. Configurar el repository --#
     connection_pool = conexionSQL().conexionSQLServer()
     repository = SQLRepository(connection_pool)
-
-    tablaTefamb = datos.leerTrans(fecha=datetime.now().date(), dias=0,
+    ## ------------------------------------##
+    tablaTefamb = datosTefabm.Clasetefabm(
         repository=repository  # Inyectamos la dependencia
     )
-    # 3. Usar normalmente
     df_Tefamb = tablaTefamb.leerBBDDtefabm()
+    ## ------------------------------------##
+    # tablaAudit = datosAudit.ClaseAudit(
+    #     repository)
+    # df_Audit = tablaAudit.leerBBDDaudit()
 
-    ###########################################################
-    ######## se define la cantidad de dias que extrae #########
-
-    # dias = 1
-    # i = 0
-    # for i in range(dias):
-    #     fecha = fecha_consulta + timedelta(days= -2)
-    #     trans = datos.leerTrans(fecha, dias)
-    #     print('-------------------- ',fecha,'-------------------- ')
-    #     df = trans.leerBBDDtrans()
-    #     df.to_csv('leerBBDDtrans.csv',sep=';')
-        # df = trans.leerBBDDaudit()
-        # i =+ 1
-    # trans.generaTablaAct()
+    ## ------------------------------------##
+    # ###########################################################
+    # ######## se define la cantidad de dias que extrae #########
+    # for i in range(1):
+    #     fecha = fecha + timedelta(days=-1)
+    #     print('\n------------------',fecha,'------------------')
+    #     tablaTrans = datosTrans.Clasetrans(
+    #         repository
+    #         ,fecha
+    #     )
+    #     df_Trans = tablaTrans.leerBBDDtrans()
+    # # trans.generaTablaAct()
 
 if __name__ == "__main__":
     main()

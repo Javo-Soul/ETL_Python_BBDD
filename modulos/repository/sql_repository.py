@@ -1,11 +1,9 @@
 # repository.py
 import pandas as pd
 from functools import wraps
-import logging
 from datetime import datetime
 from  modulos.conexionSQL.conexionBD2 import conexionSQL
-
-logger   = logging.getLogger(__name__)
+from modulos.log_cargas.log_config import logger
 
 class SQLRepository:
     def __init__(self, connection_pool):
@@ -122,5 +120,6 @@ class SQLRepository:
         success, msg = self.execute_stored_procedure(target_proc)
         if not success:
             return False, f"Fallo procedimiento: {msg}"
+        
         return True, "Proceso completo exitoso"
 

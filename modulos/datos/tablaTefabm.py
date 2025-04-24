@@ -1,50 +1,13 @@
 import pandas as pd
-import datetime
-from datetime import datetime
-from typing import Optional
 from modulos.repository.sql_repository import SQLRepository  # Importación clara
 ## ------------- librerias personalizadas ------------ ##
-from  modulos.conexionSQL.conexionBD2 import conexionSQL
-from modulos.log_cargas import log_tabla as log
-from modulos.log_cargas.log_config import logger
-## ---------------config ini ------------------------- ##
-import configparser
-config = configparser.ConfigParser()
-config.read('config.ini')
-## ---------------------------------------------------- ##
-fecha_hoy = datetime.now()
-fecha_consulta = fecha_hoy.date()
-fecha_actual = fecha_hoy.strftime("%d-%m-%Y %H:%M:%S")
-## ----------------------------------------------- ##
-conexiones = conexionSQL()
-log_carga = log.registroLOGTabla()
-# ----------------------------------------------- ##
-tablasSQL = {
-    'tablaTrans'   : config['sql']['tabla_trans'],
-    'tabla_audit'  : config['sql']['tabla_audit'],
-    'tabla_tefabm' : config['sql']['tabla_tefabm']
-}
-
-procSQL = {
-    'proc_prod_trans'  : config['procedimientos']['proc_prod_trans'],
-    'proc_prod_audit'  : config['procedimientos']['proc_prod_audit'],
-    'proc_prod_tefabm' : config['procedimientos']['proc_prod_tefabm']
-}
-
-carpetacsv = {
-  'carpetacsv'  : config['paths']['repo_csv']
-}
+from .leerarchivo import conexiones,fecha_actual,logger,tablasSQL,procSQL,registroTabla
 ## ----------------------------------------------- ##
 
 ######################################################################
-class leerTrans:
-  def __init__(self, fecha: datetime, dias: int, repository: SQLRepository):
-    self.fecha      = fecha
-    self.dias       = dias
+class Clasetefabm:
+  def __init__(self,repository: SQLRepository):
     self.repository = repository
-    self.dia        = fecha.day
-    self.mes        = fecha.month
-    self.año        = fecha.year
 
 ######################################################################
   def leerBBDDtefabm(self):
@@ -87,11 +50,21 @@ class leerTrans:
 
           if not success:
               logger.error(f"Error en carga TEFABM: {message}")
+          else:
+              logger.info(f'proceso de carga TEFABM terminado\n')
+              
+              df_tablas = {'nombre_archivo':''
+                           ,'nombre_tabla': tablasSQL['tabla_tefabm']
+                           ,'fecha':''
+                           ,'cantidad_total': df['fecha_ts'].count()
+                           ,'cargados'      : df['fecha_ts'].count()
+                           ,'dif'           : 0
+                           ,'estado_proc'   :'Ejecutado Exitosamente'}
+              
+              registroTabla.insertTablaLog(df)
 
           return df
 
       except Exception as e:
           logger.error(f"Error leyendo TEFABM: {str(e)}", exc_info=True)
           return pd.DataFrame()
-
-######################################################################

@@ -30,15 +30,14 @@ class registroLOGTabla:
     def insertTablaLog(self, dic:dict):
         try:
         ####################################################
-            data_type = {'nombre_tabla': str,'fecha' : str,'cantidad_total': float
-                         ,'cargados' : float,'dif' : float,'estado_proc': str,'fecha_carga': str}
-            
+            data_type = {col: str for col in dic}
+
             df = pd.DataFrame(dic, index=[0])
             df = df.astype(data_type)
         ####################################################
             df.replace(to_replace=r"'", value='', regex=True,inplace=True)
-            df_tablas = df[['nombre_tabla','fecha','cantidad_total','cargados','dif','estado_proc','fecha_carga']]
-            df_archivos = df[['nombre_archivo','fecha','cantidad_total','cargados','dif','estado_proc','fecha_carga']]
+            df_tablas = df[['nombre_tabla','fecha','cantidad_total','cargados','dif','estado_proc']]
+            df_archivos = df[['nombre_archivo','fecha','cantidad_total','cargados','dif','estado_proc']]
         ################################################
             with conexion.conexionSQLServer() as conn:
                 cursor = conn.cursor()
