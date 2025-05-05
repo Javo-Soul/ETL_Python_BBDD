@@ -19,13 +19,29 @@ bd_config = {
 #----------------------------------------
 
 class conexionSQL:
-    def __init__(self):
-        self.localhost     = bd_config['host']
-        self.localDatabase = bd_config['base_datos']
-        self.produccion    = os.getenv('Server_Produccion')
-        self.contingencia  = os.getenv('Server_Contingencia')
-        self.IWS           = os.getenv('Server_IWS')
-        
+    def __init__(self, environment = 'test'):
+        self.environment   = environment
+        self._carga_credenciales()
+    
+    ##################################################
+    def _carga_credenciales(self):
+        if self.environment == 'test':
+            logger.info("Cargando credenciales de test")
+            self.localhost     = bd_config['host']
+            self.localDatabase = bd_config['base_datos']
+            self.produccion    = os.getenv('Server_Produccion')
+            self.contingencia  = os.getenv('Server_Contingencia')
+            self.IWS           = os.getenv('Server_IWS')
+
+        else:
+            logger.info("Cargando credenciales de Producción")
+            self.localhost     = bd_config['host']
+            self.localDatabase = bd_config['base_datos']
+            self.produccion    = os.environ.get('Server_Produccion')
+            self.contingencia  = os.environ.get('Server_Contigencia')
+            self.IWS           = os.environ.get('IWS')
+    
+    ##################################################
     def conexion_produccion(self):
         connection = ''
         try:
@@ -42,11 +58,13 @@ class conexionSQL:
                 pwd    = password)
 
             logger.info(f"Conexión a la base de datos Produccion .70 ")
+
         except Exception as e:
             logger.error("Error de conexión SQL", exc_info=True)
 
         return connection
 
+    ##################################################    
     def conexion_IWS(self):
         connection = ''
         try:
@@ -65,6 +83,7 @@ class conexionSQL:
 
         return connection
 
+    ##################################################
     def conexion_contingencia(self):
         connection = ''
         try:
@@ -86,6 +105,7 @@ class conexionSQL:
 
         return connection
 
+    ##################################################
     def conexionSQLServer(self):
         conn = ''
         try:
@@ -101,6 +121,7 @@ class conexionSQL:
 
         return conn
 
+    ##################################################
     def querySql(self, query, tipo, valores=None):
         response = []
         try:

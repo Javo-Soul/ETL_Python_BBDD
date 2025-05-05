@@ -5,10 +5,14 @@ import logging.handlers
 from pathlib import Path
 import pandas as pd
 from datetime import datetime
+import configparser
+
+config = configparser.ConfigParser()
+config.read('config.ini')
 
 ######################################################################
 class registroLOG:
-    def setup_logging(log_name='etl_cca', log_level=logging.INFO):
+    def setup_logging(log_name= config['etl_name']['etl_name'], log_level=logging.INFO):
         logs_dir = Path(__file__).resolve().parent / 'logs'
         logs_dir.mkdir(exist_ok=True)
 

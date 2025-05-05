@@ -52,43 +52,4 @@ def mide_tiempo(func):
     return result
   return wrapper
 
-######################################################################
-#   def generaTablaAct(self):
-#     diccionario = {}
-#     BBDD        =  f'''[{database}].'''
-#     nombre_tabla,fecha_data,cantidad_total = [],[],[]
-#     cargados,dif,estado,fecha_carga   = [],[],[],[]
-    
-#     try:      
-#       tablasAct = f''' '{tabla_trans.replace('.[t_paso_ctr_op]','')}' , '{tabla_audit.replace('.[t_paso_ctr_op]','')}'
-#                     , '{tabla_tefabm.replace('.[t_paso_ctr_op]','')}' '''
-
-#       query = f'''SELECT [nombre_tabla],[fecha],[cantidad_total]
-#                 ,[cargados],[dif],[estado],[fecha_carga]
-#                 FROM [prod_ctrl_contable].[ctrl_op_contable].[log_tablas_cargadas]
-#                 where convert(date,fecha_carga,103) = convert(date,getdate() ,103) 
-#                 and nombre_tabla in ({tablasAct}) 
-#                 order by [fecha_carga] desc '''
-
-#       selectQuery = conexiones.querySql(query, 'select all')
-
-#       for row in selectQuery:
-#         nombre_tabla.append(row[0].replace(BBDD,''))
-#         fecha_data.append(row[1])
-#         cantidad_total.append(row[2])
-#         cargados.append(row[3])
-#         dif.append(row[4])
-#         estado.append(row[5])
-#         fecha_carga.append(row[6])
-
-#       diccionario.update({'nombre_tabla': nombre_tabla,'fecha': fecha_data,'cantidad_total': cantidad_total,
-#                           'cargados': cargados,'dif': dif,'estado': estado,'fecha_carga': fecha_carga})
-
-#       df = pd.DataFrame.from_dict(diccionario)
-      
-#       df.to_csv(carpetacsv+'tabla_actualizada.csv', sep=';')
-#       print(df)
-
-#     except Exception as e:
-#       print(e)
 

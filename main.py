@@ -9,7 +9,7 @@ from modulos.datos import tablaAudit as datosAudit
 def main():
     fecha = datetime.now()
     #-- 1. Configurar el repository --#
-    connection_pool = conexionSQL().conexionSQLServer()
+    connection_pool = conexionSQL(environment='test' ).conexionSQLServer()
     repository = SQLRepository(connection_pool)
     ## ------------------------------------##
     tablaTefamb = datosTefabm.Clasetefabm(
@@ -23,15 +23,14 @@ def main():
     ## ------------------------------------##
     ###########################################################
     ######## se define la cantidad de dias que extrae #########
-    # for i in range(3):
-    #     fecha = fecha + timedelta(days=-1)
-    #     print('\n------------------',fecha,'------------------')
-    #     tablaTrans = datosTrans.Clasetrans(
-    #         repository
-    #         ,fecha
-    #     )
-    #     df_Trans = tablaTrans.leerBBDDtrans()
-    # trans.generaTablaAct()
+    for i in range(1):
+        fecha = fecha + timedelta(days=-1)
+        print('\n------------------',fecha,'------------------')
+        tablaTrans = datosTrans.Clasetrans(
+            repository
+            ,fecha
+        )
+        df_Trans = tablaTrans.leerBBDDtrans()
 
 if __name__ == "__main__":
     main()
