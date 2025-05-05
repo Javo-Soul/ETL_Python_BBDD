@@ -24,7 +24,8 @@ class Clasetrans:
     def leerBBDDtrans(self):
         try:
           # ... lógica de lectura...
-            logger.info(f'leyendo datos de leerBBDDtrans')
+          # cambiar al servidor de contingencia
+            logger.info(f'leyendo datos de leerBBDDtrans del dia {self.fecha}')
             c1 = conexiones.conexion_contingencia().cursor()
             query = f''' SELECT 'TEF' Origen,TO_DATE(CASE WHEN LENGTH(CAST( A.TRABDD AS VARCHAR(2))) = 1 THEN 
             0||A.TRABDD ELSE VARCHAR(A.TRABDD) END  ||CASE WHEN LENGTH(CAST(A.TRABDM AS VARCHAR(2))) = 1 THEN 
@@ -93,6 +94,15 @@ class Clasetrans:
         
         except Exception as e:
             logger.error(f'leyendo datos de leerBBDDtrans : {e}', exc_info=True)
+            dict_result = {'nombre_archivo': '','nombre_tabla': tablasSQL['tablaTrans'],
+                                    'fecha': datetime.now().strftime('%Y-%m-%d') ,
+                                    'fecha_query': datetime.now().strftime('%Y-%m-%d') ,
+                                    'cantidad_total': 0,
+                                    'cargados': 0,'dif': 0,'estado_proc': ''
+                                    ,'estado_proc': f"Error leyendo leerBBDDtrans {str(e)}"
+                                }
+
+            self.repository.load_log_table(dict_result)
             df = pd.DataFrame()
         return df
 

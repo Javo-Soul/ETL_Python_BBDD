@@ -5,7 +5,8 @@ __pycache__/
 *.env
 *.csv
 *.log
-*.txt
+revisar_tablas.txt
+test.py
 # Distribution / packaging
 archivoscsv/
 test/

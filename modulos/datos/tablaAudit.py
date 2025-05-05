@@ -1,5 +1,6 @@
 import pandas as pd
-from modulos.repository.sql_repository import SQLRepository  # Importación clara
+from datetime import datetime
+from modulos.repository.sql_repository import SQLRepository
 ## ------------- librerias personalizadas ------------ ##
 from .leerarchivo import conexiones,fecha_actual,logger,tablasSQL,procSQL
 ## ----------------------------------------------- ##
@@ -12,8 +13,9 @@ class ClaseAudit:
 ######################################################################
   def leerBBDDaudit(self):
     try:
-        logger.info('leyendo datos de leerBBDDaudit')
+        logger.info(f'leyendo datos de leerBBDDaudit del dia {fecha_actual}')
             # ... lógica de lectura...
+            # cambiar al servidor de contingencia
         c1    = conexiones.conexion_contingencia().cursor()
         query = f''' select TO_DATE(CASE WHEN LENGTH(CAST( AUDDTD AS VARCHAR(2))) = 1 THEN 
             0||AUDDTD ELSE VARCHAR(AUDDTD) END  ||
@@ -74,7 +76,16 @@ class ClaseAudit:
         return df
     except Exception as e:
       logger.error(f'leyendo datos de leerBBDDaudit : {e}', exc_info=True)
-      df = pd.DataFrame()
+      
+      dict_result = {'nombre_archivo': '','nombre_tabla': tablasSQL['tabla_audit'],
+                            'fecha': datetime.now().strftime('%Y-%m-%d') ,
+                            'fecha_query': datetime.now().strftime('%Y-%m-%d') ,
+                            'cantidad_total': 0,
+                            'cargados': 0,'dif': 0,'estado_proc': ''
+                            ,'estado_proc': f"Error leyendo leerBBDDaudit {str(e)}"
+                        }
+ 
+      self.repository.load_log_table(dict_result)     
 
     ### ----------------------------------------- ###
     ##############################################################

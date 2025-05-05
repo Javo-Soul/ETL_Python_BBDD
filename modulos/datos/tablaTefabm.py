@@ -1,4 +1,5 @@
 import pandas as pd
+from datetime import datetime
 from modulos.repository.sql_repository import SQLRepository  # Importación clara
 ## ------------- librerias personalizadas ------------ ##
 from .leerarchivo import conexiones,fecha_actual,logger,tablasSQL,procSQL,registroTabla
@@ -12,8 +13,9 @@ class Clasetefabm:
 ######################################################################
   def leerBBDDtefabm(self):
       try:
-          logger.info('Leyendo datos de TEFABM')
+          logger.info(f'Leyendo datos de TEFABM del dia {fecha_actual}')
           # ... lógica de lectura...
+          # cambiar a conexion de contigencia....
           c1    = conexiones.conexion_contingencia().cursor()
           query = f''' select a.TEFRUE,a.TEFRSP,a.TEFTAM,a.TEFDAM,a.TEFFAN
           ,a.TEFRBF,a.TEFNBF,a.TEFBCO,a.TEFCTA,a.TEFTCT,a.TEFMTR
@@ -40,8 +42,10 @@ class Clasetefabm:
           df = df.replace('  ','', regex=True)
           df['fecha_ts'] = fecha_actual
           df = df.astype(df_datatype)
-          # Cargar usando el repository
 
+          #----------------------------------------------##
+          #----------------------------------------------##
+          # Cargar usando el repository
           success, message = self.repository.full_load_process(
               df=df,
               staging_table = tablasSQL['tabla_tefabm'],
@@ -52,19 +56,19 @@ class Clasetefabm:
               logger.error(f"Error en carga TEFABM: {message}")
           else:
               logger.info(f'proceso de carga TEFABM terminado\n')
-              
-              df_tablas = {'nombre_archivo':''
-                           ,'nombre_tabla': tablasSQL['tabla_tefabm']
-                           ,'fecha':''
-                           ,'cantidad_total': df['fecha_ts'].count()
-                           ,'cargados'      : df['fecha_ts'].count()
-                           ,'dif'           : 0
-                           ,'estado_proc'   :'Ejecutado Exitosamente'}
-              
-              registroTabla.insertTablaLog(df)
 
           return df
 
       except Exception as e:
           logger.error(f"Error leyendo TEFABM: {str(e)}", exc_info=True)
+          dict_result = {'nombre_archivo': '','nombre_tabla': tablasSQL['tabla_tefabm'],
+                            'fecha': datetime.now().strftime('%Y-%m-%d') ,
+                            'fecha_query': datetime.now().strftime('%Y-%m-%d') ,
+                            'cantidad_total': 0,
+                            'cargados': 0,'dif': 0,'estado_proc': ''
+                            ,'estado_proc': f"Error leyendo TEFABM {str(e)}"
+                        }
+ 
+          self.repository.load_log_table(dict_result)              
           return pd.DataFrame()
+ 

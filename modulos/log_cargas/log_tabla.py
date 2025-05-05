@@ -34,11 +34,12 @@ class registroLOGTabla:
 
             df = pd.DataFrame(dic, index=[0])
             df = df.astype(data_type)
-        ####################################################
+        # ####################################################
             df.replace(to_replace=r"'", value='', regex=True,inplace=True)
             df_tablas = df[['nombre_tabla','fecha','cantidad_total','cargados','dif','estado_proc']]
             df_archivos = df[['nombre_archivo','fecha','cantidad_total','cargados','dif','estado_proc']]
-        ################################################
+        # ################################################
+            print('df_archivos',df_archivos)
             with conexion.conexionSQLServer() as conn:
                 cursor = conn.cursor()
             ##
@@ -72,7 +73,7 @@ class registroLOGTabla:
                             )
             conn.commit()
 
-            logger.info(f"Insertado en tabla log_tablas: {df_tablas['nombre_tabla'].values[0]}")            
+            logger.info(f"Insertado en tabla log_tablas: {df_tablas['nombre_tabla'].values[0]}")
         except Exception as e:
             logger.error("Error al insertar en tabla log_tablas", exc_info=True)
 
