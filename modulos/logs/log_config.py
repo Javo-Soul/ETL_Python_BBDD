@@ -13,7 +13,7 @@ config.read('config.ini')
 ######################################################################
 class registroLOG:
     def setup_logging(log_name= config['etl_name']['etl_name'], log_level=logging.INFO):
-        logs_dir = Path(__file__).resolve().parent / 'logs'
+        logs_dir = Path(__file__).resolve().parents[2]/ 'logs'
         logs_dir.mkdir(exist_ok=True)
 
         logger = logging.getLogger(log_name)

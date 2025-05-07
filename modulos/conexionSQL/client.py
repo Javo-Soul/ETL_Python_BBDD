@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import configparser
 load_dotenv()
 import logging
-from modulos.log_cargas.log_config import logger
+from modulos.logs.log_config import logger
 ##-------- archivo config ---------------
 config = configparser.ConfigParser()
 config.read('config.ini')

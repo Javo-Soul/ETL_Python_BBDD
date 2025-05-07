@@ -4,8 +4,8 @@ import datetime
 import configparser
 from functools import wraps
 from datetime import datetime
-from  modulos.conexionSQL.conexionBD2 import conexionSQL
-from modulos.log_cargas.log_config import logger
+from  modulos.conexionSQL.client import conexionSQL
+from modulos.logs.log_config import logger
 
 config = configparser.ConfigParser()
 config.read('config.ini')

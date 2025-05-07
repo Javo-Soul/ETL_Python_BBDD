@@ -5,11 +5,9 @@ import time
 from datetime import datetime
 
 ## ------------- librerias personalizadas ------------ ##
-from  modulos.conexionSQL.conexionBD2 import conexionSQL
-from modulos.log_cargas import log_tabla as log
-from modulos.log_cargas.log_config import logger
-from modulos.log_cargas.log_tabla import registroLOGTabla
-## ---------------config ini ------------------------- ##
+from  modulos.conexionSQL.client import conexionSQL
+from modulos.logs.log_config import logger
+## --------------- config ini ------------------------- ##
 import configparser
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -19,8 +17,6 @@ fecha_consulta = fecha_hoy.date()
 fecha_actual = fecha_hoy.strftime("%d-%m-%Y %H:%M:%S")
 ## ----------------------------------------------- ##
 conexiones    = conexionSQL()
-log_carga     = log.registroLOGTabla()
-registroTabla = registroLOGTabla
 # ----------------------------------------------- ##
 tablasSQL = {
     'tablaTrans'   : config['sql']['tabla_trans'],
