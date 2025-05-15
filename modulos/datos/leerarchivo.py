@@ -8,9 +8,8 @@ from datetime import datetime
 from  modulos.conexionSQL.client import conexionSQL
 from modulos.logs.log_config import logger
 ## --------------- config ini ------------------------- ##
-import configparser
-config = configparser.ConfigParser()
-config.read('config.ini')
+from modulos.config_loader import cargar_config
+config = cargar_config()
 ## ---------------------------------------------------- ##
 fecha_hoy = datetime.now()
 fecha_consulta = fecha_hoy.date()

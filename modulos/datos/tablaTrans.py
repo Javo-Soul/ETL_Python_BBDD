@@ -57,6 +57,7 @@ class Clasetrans:
             FROM PRDCYFILES.trans AS A
             LEFT JOIN prdcyfiles.GLMST AS D ON A.TRACCY = D.GLMCCY AND A.TRAGLN = D.GLMGLN 
             WHERE TRABDY = ? AND TRABDM in (?) and A.trabdd = ? AND TRAGLN = 2115990110013800 AND TRABTH = 59014
+            limit 1000
             '''
 
             params = (self.año, self.mes, self.dia, 
@@ -82,8 +83,10 @@ class Clasetrans:
             success, message = self.repository.full_load_process(
             df=df,
             staging_table = tablasSQL['tablaTrans'],
-            target_proc   = procSQL['proc_prod_trans']
-        )
+            target_proc   = {
+                'data' : procSQL['proc_prod_trans']
+                }
+            )
 
             if not success:
                 logger.error(f"Error en carga Trans:{message}")

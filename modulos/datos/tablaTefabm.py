@@ -42,15 +42,15 @@ class Clasetefabm:
           df = df.replace('  ','', regex=True)
           df['fecha_ts'] = fecha_actual
           df = df.astype(df_datatype)
-
-          #----------------------------------------------##
-          #----------------------------------------------##
-          # Cargar usando el repository
+          ## ----------------------------------------------- ##
+          ## --------- Cargar usando el repository --------- ##
           success, message = self.repository.full_load_process(
               df=df,
               staging_table = tablasSQL['tabla_tefabm'],
-              target_proc   = procSQL['proc_prod_tefabm']
-          )
+              target_proc   = {
+                    'carga_data'    :f"{procSQL['proc_prod_tefabm']}",
+                }
+            ) 
 
           if not success:
               logger.error(f"Error en carga TEFABM: {message}")

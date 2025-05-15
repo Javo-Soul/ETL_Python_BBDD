@@ -39,6 +39,7 @@ class ClaseAudit:
             ------------------------------------
             where audtcd in (610,611,613,614)   and Audflg = 'A'
             order by Audtms
+            limit 100
             '''
 
         c1.execute(query)
@@ -64,8 +65,10 @@ class ClaseAudit:
         succes, message = self.repository.full_load_process(
             df=df,
             staging_table = tablasSQL['tabla_audit'],
-            target_proc   = procSQL['proc_prod_audit']
-        )
+            target_proc   = {
+                    'carga_data'    :f"{procSQL['proc_prod_audit']}",
+                }
+            )
 
         if not succes:
             logger.error(f'Error en Carga Audit: {message} ')

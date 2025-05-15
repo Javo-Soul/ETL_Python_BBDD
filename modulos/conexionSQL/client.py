@@ -2,13 +2,12 @@ import pyodbc
 import os
 import json
 from dotenv import load_dotenv
-import configparser
 load_dotenv()
 import logging
 from modulos.logs.log_config import logger
 ##-------- archivo config ---------------
-config = configparser.ConfigParser()
-config.read('config.ini')
+from modulos.config_loader import cargar_config
+config = cargar_config()
 
 bd_config = {
     'host'      : config['BBDD']['host'],
@@ -30,7 +29,7 @@ class conexionSQL:
             self.localhost     = bd_config['host']
             self.localDatabase = bd_config['base_datos']
             self.produccion    = os.getenv('Server_Produccion')
-            self.contingencia  = os.getenv('Server_Contingencia')
+            self.contingencia  = os.getenv('Server_Contigencia')
             self.IWS           = os.getenv('Server_IWS')
 
         else:
@@ -43,7 +42,7 @@ class conexionSQL:
     
     ##################################################
     def conexion_produccion(self):
-        connection = ''
+        connection = None
         try:
             credentials = self.produccion
             credentials = json.loads(credentials)
@@ -66,7 +65,7 @@ class conexionSQL:
 
     ##################################################    
     def conexion_IWS(self):
-        connection = ''
+        connection = None
         try:
             credentials = self.IWS
             credentials = json.loads(credentials)
@@ -85,7 +84,7 @@ class conexionSQL:
 
     ##################################################
     def conexion_contingencia(self):
-        connection = ''
+        connection = None
         try:
             credentials = self.contingencia
             credentials = json.loads(credentials)
@@ -107,15 +106,14 @@ class conexionSQL:
 
     ##################################################
     def conexionSQLServer(self):
-        conn = ''
+        conn = None
         try:
-            conn = ''
+            conn   = None
             server = self.localhost
             database = self.localDatabase
             conn = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';Trusted_Connection=yes')
 
             logger.info(f"Conexión a la base de datos SQL Server {server}")
-
         except Exception as e:
             logger.error("Error de conexión SQL", exc_info=True)
 

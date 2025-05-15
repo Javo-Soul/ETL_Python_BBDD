@@ -1,66 +1,31 @@
 # repository.py
+import os
 import pandas as pd
-import datetime
-import configparser
-from functools import wraps
 from datetime import datetime
-from  modulos.conexionSQL.client import conexionSQL
 from modulos.logs.log_config import logger
+from modulos.utils.utils import class_utils
 
-config = configparser.ConfigParser()
-config.read('config.ini')
+## -------- archivo config ------------------ ##
+from modulos.config_loader import cargar_config
+config = cargar_config()
+## ------------------------------------------ ##
 
+measure_time = class_utils.measure_time
+dict_gen     = class_utils.dict_generator
+
+## -------------------------------------------------- ##
 tablaLog = {
     'logTabla'  : config['sql']['tabla_log_tablas'],
     'logArchivo': config['sql']['tabla_log_archivos']
 }
 
+## -------------------------------------------------- ##
 class SQLRepository:
+    """
+    Clase para manejar operaciones de carga y ejecución de procedimientos en la base de datos SQL.
+    """
     def __init__(self, connection_pool):
         self.connection_pool = connection_pool
-
-    @staticmethod
-    def measure_time(func):
-        @wraps(func)
-        def wrapper(*args, **kwargs):
-            start_time = datetime.now()
-            result = func(*args, **kwargs)
-            elapsed_time = datetime.now() - start_time
-            logger.info(f"{func.__name__} executed in {elapsed_time.total_seconds():.2f} seconds")
-            return result
-        return wrapper
-
-    def _validar_y_formatear_fecha(self, fecha_str):
-        """
-        Valida y formatea una fecha string a formato YYYY-MM-DD
-        Si no puede parsear, devuelve la fecha actual
-        """
-        if not fecha_str or pd.isna(fecha_str):
-            return datetime.now().strftime('%Y-%m-%d')
-        
-        fecha_str = str(fecha_str).strip()
-        
-        # Lista de formatos de fecha a probar
-        formatos_fecha = [
-            '%Y-%m-%d',    # 2023-12-31
-            '%d/%m/%Y',     # 31/12/2023
-            '%m/%d/%Y',     # 12/31/2023
-            '%Y%m%d',       # 20231231
-            '%d-%m-%Y',     # 31-12-2023
-            '%Y/%m/%d',    # 2023/12/31
-            '%Y-%m-%d %H:%M:%S',  # Con hora
-            '%d/%m/%Y %H:%M:%S'    # Con hora
-        ]
-        
-        for formato in formatos_fecha:
-            try:
-                fecha_obj = datetime.strptime(fecha_str, formato)
-                return fecha_obj.strftime('%Y-%m-%d')
-            except ValueError:
-                continue
-        
-        # Si ningún formato funcionó, usar fecha actual
-        return datetime.now().strftime('%Y-%m-%d')
 
 ## -------------------------------------------------- ## 
     def get_connection(self):
@@ -68,6 +33,9 @@ class SQLRepository:
 
 ## -------------------------------------------------- ## 
     def load_log_table(self,dic:dict):
+        """
+        Inserta registros en las tablas de log basándose en el diccionario proporcionado.
+        """
         try:
             result = dic
             estado = str(result['estado_proc'])
@@ -75,51 +43,56 @@ class SQLRepository:
 
             result.update({'estado_proc':valor})
         ####################################################
+            
             data_type = {col: str for col in dic}
-
             df = pd.DataFrame(dic, index=[0])
             df = df.astype(data_type)
-        # ####################################################
+        ####################################################
             df.replace(to_replace=r"'", value='', regex=True,inplace=True)
-            df_tablas = df[['nombre_tabla','fecha','cantidad_total','cargados','dif','estado_proc']]
-            df_archivos = df[['nombre_archivo','fecha','cantidad_total','cargados','dif','estado_proc']]
+            ####################################################
+            if result.get('archivo_origen'):
+                if not df['archivo_origen'].empty or df['archivo_origen'].iloc[0] != '':
+                    df_archivos = df[['archivo_origen','fecha_archivo','cantidad_total'
+                                    ,'cargados','dif','estado_proc']]                
 
-        ######################################################
-        #     with self.get_connection() as conn:
-        #         cursor = conn.cursor()
+                    with self.get_connection() as conn:
+                        cursor = conn.cursor()
+                        cursor.execute(f'''insert into {tablaLog['logArchivo']} (nombre_archivo, fecha_archivo, cantidad_total
+                                                                                ,cargados, dif, estado,fecha_carga)
+                                        values (?,?,?,?,?,?,?)''',
+                                        df_archivos['archivo_origen'].values[0],
+                                        df_archivos['fecha_archivo'].values[0],
+                                        df_archivos['cantidad_total'].values[0],
+                                        df_archivos['cargados'].values[0],
+                                        df_archivos['dif'].values[0],
+                                        df_archivos['estado_proc'].values[0],
+                                        datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                                        )
+                        print("Fila insertada:", cursor.rowcount)
+                        conn.commit()
 
-        # ######################################################
-        #     cursor.execute(f'''insert into {tablaLog['log_archivos']} (nombre_archivo, fecha_archivo, cantidad_total
-        #                                                                ,cargados, dif, estado,fecha_carga)
-        #                     values (?,?,?,?,?,?,?)''',
-        #                     df_archivos['nombre_archivo'].values[0],
-        #                     df_archivos['fecha'].values[0],
-        #                     df_archivos['cantidad_total'].values[0],
-        #                     df_archivos['cargados'].values[0],
-        #                     df_archivos['dif'].values[0],
-        #                     df_archivos['estado_proc'].values[0],
-        #                     datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        #                     )
-        #     conn.commit()
+            if result.get('nombre_tabla'):
+                if df['estado_proc'].values[0] != 'archivo vacio' or df['nombre_tabla'].values[0] != None:
+                    df_tablas   = df[['nombre_tabla','fecha','cantidad_total','cargados','dif','estado_proc']]                    
+                    with self.get_connection() as conn:
+                        cursor = conn.cursor()
+                        cursor.execute(f'''insert into {tablaLog['logTabla']} (nombre_tabla, fecha, cantidad_total
+                                                                                ,cargados     , dif  , estado
+                                                                                ,fecha_carga)
+                                        values (?,?,?,?,?,?,?)''',
+                                        df_tablas['nombre_tabla'].values[0],
+                                        df_tablas['fecha'].values[0],
+                                        df_tablas['cantidad_total'].values[0],
+                                        df_tablas['cargados'].values[0],
+                                        df_tablas['dif'].values[0],
+                                        df_tablas['estado_proc'].values[0],
+                                        datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                                        )
 
-            with self.get_connection() as conn:
-                cursor = conn.cursor()
-            ################################################
-            cursor.execute(f'''insert into {tablaLog['logTabla']} (nombre_tabla, fecha, cantidad_total
-                                                                       ,cargados     , dif  , estado
-                                                                       ,fecha_carga)
-                            values (?,?,?,?,?,?,?)''',
-                            df_tablas['nombre_tabla'].values[0],
-                            df_tablas['fecha'].values[0],
-                            df_tablas['cantidad_total'].values[0],
-                            df_tablas['cargados'].values[0],
-                            df_tablas['dif'].values[0],
-                            df_tablas['estado_proc'].values[0],
-                            datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                            )
-            conn.commit()
-
-            logger.info(f"Insertado en tabla log_tablas: {df_tablas['nombre_tabla'].values[0]}")
+                        conn.commit()
+            
+            logger.info(f"{cursor.rowcount} datpos Insertados en tabla log_tablas")
+            ####################################################
         except Exception as e:
             logger.error("Error al insertar en tabla log_tablas", exc_info=True)
 
@@ -148,16 +121,13 @@ class SQLRepository:
             return False, dict_result, "DataFrame vacío"
 
         try:
-            # Si no se pasan columnas a extraer, usar una lista por defecto vacía
+            ###### Si no se pasan columnas a extraer, usar una lista por defecto vacía
             extract_columns = extract_columns or []
 
-            # Extraer valores de interés antes de cargar
+            ###### Extraer valores de interés antes de cargar
             valores_extraidos = {col: (df[col].iloc[0] if col in df.columns else None) for col in extract_columns}
             fecha_actual = datetime.now().strftime('%Y-%m-%d')
             valores_extraidos.update({k: fecha_actual for k in ('fecha', 'fecha_query') if valores_extraidos.get(k) is None})
-
-            dict_result.update(valores_extraidos)
-            dict_result.update({'nombre_tabla': table_name})
 
             with self.get_connection() as conn:
                 cursor = conn.cursor()
@@ -176,6 +146,7 @@ class SQLRepository:
 
                 # Insertar por lotes
                 total_rows = len(df)
+
                 for i in range(0, total_rows, batch_size):
                     batch = df.iloc[i:i+batch_size].values.tolist()
                     cursor.executemany(query, batch)
@@ -183,11 +154,14 @@ class SQLRepository:
 
                 conn.commit()
 
-                dict_result.update({'nombre_archivo':'','nombre_tabla': table_name
-                            ,'cantidad_total': df.shape[0]
+                logger.info(f"carga de {df['fecha_ts'].count()} datos en la tabla {table_name}")
+
+                dict_result.update({
+                            'cantidad_total': df.shape[0]
                             ,'cargados'      : total_rows
                             ,'dif': df.shape[0]-total_rows
                             ,'estado_proc': 'Ejecutado correctamente'})
+                dict_result.update(valores_extraidos)
 
                 return True, dict_result, f"{total_rows} filas insertadas en {table_name}"
 
@@ -232,7 +206,7 @@ class SQLRepository:
 
 ## -------------------------------------------------- ##
     @measure_time
-    def full_load_process(self, df, staging_table, target_proc):
+    def full_load_process(self, df, staging_table, target_proc:dict):
         """
         Proceso completo de carga: staging + procedimiento
         Args:
@@ -244,16 +218,16 @@ class SQLRepository:
         """
         ## Paso 1: Carga a staging
         try:
-            dict_result = {'nombre_archivo': '','nombre_tabla': staging_table,
-                            'fecha': datetime.now().strftime('%Y-%m-%d'),
-                            'fecha_query': datetime.now().strftime('%Y-%m-%d'),
-                            'cantidad_total': len(df) if isinstance(df, pd.DataFrame) else 0,
-                            'cargados': 0,'dif': 0,'estado_proc': ''
-                        }
+            dict_result = dict_gen(tipo = 'log_tabla')
+            dict_result.update({'nombre_tabla': staging_table})
 
-            extract_columns=['nombre_archivo', 'fecha','fecha_query','fecha_ts']
+            extract_columns=['archivo_origen','nombre_archivo','fecha_archivo','fecha','fecha_query','fecha_ts']
+
             # Paso 1: Carga a staging
-            success, temp_dict, msgLoad = self.load_to_staging(df, staging_table, truncate=True,extract_columns=extract_columns)
+            success, temp_dict, msgLoad = self.load_to_staging(df
+                                                               ,staging_table
+                                                               , truncate=True
+                                                               ,extract_columns = extract_columns)
             dict_result.update(temp_dict)
 
             if not success:
@@ -261,8 +235,9 @@ class SQLRepository:
                 return False, f"Fallo carga staging: {msgLoad}"
 
         ### Paso 2: Ejecutar procedimiento
-            success, msgProc = self.execute_stored_procedure(target_proc)
-            dict_result['estado_proc'] = msgProc
+            for proc in target_proc.values():
+                success, msgProc = self.execute_stored_procedure(proc)
+                dict_result['estado_proc'] = msgProc
 
             if not success:
                 return False, f"Fallo procedimiento: {msgProc}"

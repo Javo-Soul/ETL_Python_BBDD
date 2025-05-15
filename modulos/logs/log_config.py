@@ -7,9 +7,10 @@ import pandas as pd
 from datetime import datetime
 import configparser
 
-config = configparser.ConfigParser()
-config.read('config.ini')
-
+## --------- Leer archivo de configuración ---------- ##
+from modulos.config_loader import cargar_config
+config = cargar_config()
+## -------------------------------------------------- ##
 ######################################################################
 class registroLOG:
     def setup_logging(log_name= config['etl_name']['etl_name'], log_level=logging.INFO):
