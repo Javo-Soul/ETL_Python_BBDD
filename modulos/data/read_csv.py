@@ -2,7 +2,7 @@ import pandas as pd
 from datetime import datetime
 from modulos.repository.sql_repository import SQLRepository  # Importación clara
 ## ------------- librerias personalizadas ------------ ##
-from .leerarchivo import conexiones,fecha_actual,logger,tablasSQL,procSQL
+from .global_vars import conexiones,fecha_actual,logger,tablasSQL,procSQL
 ## ----------------------------------------------- ##
 
 ######################################################################

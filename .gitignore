@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.env
+*.venv
 *.csv
 *.log
 revisar_tablas.txt
@@ -34,3 +35,6 @@ archivocsv/
 
 # IDEs
 __pycache__/
+.vscode/*
+# se conserva el launch para futuras configuraciones
+!.vscode/launch.json

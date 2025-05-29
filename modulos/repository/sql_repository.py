@@ -32,71 +32,6 @@ class SQLRepository:
         return self.connection_pool
 
 ## -------------------------------------------------- ## 
-    def load_log_table(self,dic:dict):
-        """
-        Inserta registros en las tablas de log basándose en el diccionario proporcionado.
-        """
-        try:
-            result = dic
-            estado = str(result['estado_proc'])
-            valor = estado.split(':', 1)[1].strip() if ':' in estado else estado
-
-            result.update({'estado_proc':valor})
-        ####################################################
-            
-            data_type = {col: str for col in dic}
-            df = pd.DataFrame(dic, index=[0])
-            df = df.astype(data_type)
-        ####################################################
-            df.replace(to_replace=r"'", value='', regex=True,inplace=True)
-            ####################################################
-            if result.get('archivo_origen'):
-                if not df['archivo_origen'].empty or df['archivo_origen'].iloc[0] != '':
-                    df_archivos = df[['archivo_origen','fecha_archivo','cantidad_total'
-                                    ,'cargados','dif','estado_proc']]                
-
-                    with self.get_connection() as conn:
-                        cursor = conn.cursor()
-                        cursor.execute(f'''insert into {tablaLog['logArchivo']} (nombre_archivo, fecha_archivo, cantidad_total
-                                                                                ,cargados, dif, estado,fecha_carga)
-                                        values (?,?,?,?,?,?,?)''',
-                                        df_archivos['archivo_origen'].values[0],
-                                        df_archivos['fecha_archivo'].values[0],
-                                        df_archivos['cantidad_total'].values[0],
-                                        df_archivos['cargados'].values[0],
-                                        df_archivos['dif'].values[0],
-                                        df_archivos['estado_proc'].values[0],
-                                        datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                                        )
-                        print("Fila insertada:", cursor.rowcount)
-                        conn.commit()
-
-            if result.get('nombre_tabla'):
-                if df['estado_proc'].values[0] != 'archivo vacio' or df['nombre_tabla'].values[0] != None:
-                    df_tablas   = df[['nombre_tabla','fecha','cantidad_total','cargados','dif','estado_proc']]                    
-                    with self.get_connection() as conn:
-                        cursor = conn.cursor()
-                        cursor.execute(f'''insert into {tablaLog['logTabla']} (nombre_tabla, fecha, cantidad_total
-                                                                                ,cargados     , dif  , estado
-                                                                                ,fecha_carga)
-                                        values (?,?,?,?,?,?,?)''',
-                                        df_tablas['nombre_tabla'].values[0],
-                                        df_tablas['fecha'].values[0],
-                                        df_tablas['cantidad_total'].values[0],
-                                        df_tablas['cargados'].values[0],
-                                        df_tablas['dif'].values[0],
-                                        df_tablas['estado_proc'].values[0],
-                                        datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                                        )
-
-                        conn.commit()
-            
-            logger.info(f"{cursor.rowcount} datpos Insertados en tabla log_tablas")
-            ####################################################
-        except Exception as e:
-            logger.error("Error al insertar en tabla log_tablas", exc_info=True)
-
-## -------------------------------------------------- ## 
     @measure_time
     def load_to_staging(self, df, table_name, truncate=True, batch_size=10000, extract_columns=None):
         """
@@ -212,38 +147,30 @@ class SQLRepository:
         Args:
             df: DataFrame con datos
             staging_table: Tabla de staging
-            target_proc: Procedimiento para consolidar datos            
+            target_proc: Procedimiento para consolidar datos
         Returns:
             Tuple (bool, str): Resultado combinado del proceso
         """
         ## Paso 1: Carga a staging
         try:
-            dict_result = dict_gen(tipo = 'log_tabla')
-            dict_result.update({'nombre_tabla': staging_table})
-
-            extract_columns=['archivo_origen','nombre_archivo','fecha_archivo','fecha','fecha_query','fecha_ts']
+            print(df.head(10), staging_table, target_proc)
 
             # Paso 1: Carga a staging
-            success, temp_dict, msgLoad = self.load_to_staging(df
-                                                               ,staging_table
-                                                               , truncate=True
-                                                               ,extract_columns = extract_columns)
-            dict_result.update(temp_dict)
+        #     success, temp_dict, msgLoad = self.load_to_staging(df
+        #                                                        ,staging_table
+        #                                                        , truncate=False)
+        #     if not success:
+        #         return False, f"Fallo carga staging: {msgLoad}"
 
-            if not success:
-                dict_result['estado_proc'] = msgLoad
-                return False, f"Fallo carga staging: {msgLoad}"
+        # ### Paso 2: Ejecutar procedimiento
+        #     for proc in target_proc.values():
+        #         success, msgProc = self.execute_stored_procedure(proc)
 
-        ### Paso 2: Ejecutar procedimiento
-            for proc in target_proc.values():
-                success, msgProc = self.execute_stored_procedure(proc)
-                dict_result['estado_proc'] = msgProc
+        #     if not success:
+        #         return False, f"Fallo procedimiento: {msgProc}"
 
-            if not success:
-                return False, f"Fallo procedimiento: {msgProc}"
-
-            return True, "Proceso completo exitoso"
+        #     return True, "Proceso completo exitoso"
         
-        finally:
-            self.load_log_table(dict_result)
+        except Exception as e:
+            logger.error("Fallo el proceso:",e, exc_info=True)
 

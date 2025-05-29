@@ -3,9 +3,8 @@ import datetime
 from functools import wraps
 import time
 from datetime import datetime
-
 ## ------------- librerias personalizadas ------------ ##
-from  modulos.conexionSQL.client import conexionSQL
+from  modulos.databaseClient.client import conexionSQL
 from modulos.logs.log_config import logger
 ## --------------- config ini ------------------------- ##
 from modulos.config_loader import cargar_config
@@ -25,26 +24,10 @@ tablasSQL = {
 
 procSQL = {
     'proc_prod_trans'  : config['procedimientos']['proc_prod_trans'],
-    'proc_prod_audit'  : config['procedimientos']['proc_prod_audit'],
-    'proc_prod_tefabm' : config['procedimientos']['proc_prod_tefabm']
 }
 
 carpetacsv = {
   'carpetacsv'  : config['paths']['repo_csv']
 }
 ## ----------------------------------------------- ##
-
-######################################################################
-def mide_tiempo(func):
-  @wraps(func)
-
-  def wrapper(*args, **kwargs):
-    start_time   = time.time()
-    result       = func(*args,**kwargs)
-    end_time     = time.time()
-    elapsed_time = end_time - start_time      
-    print(f"tiempo de ejecucion de {func.__name__}: {elapsed_time:.2f} segundos","\n")
-    return result
-  return wrapper
-
 
