@@ -9,15 +9,35 @@ Este proyecto levanta una instancia de PostgreSQL y pgAdmin usando Docker y `doc
 
 ## 📁 Estructura del proyecto
 
-.
-├── .env
-├── docker-compose.yml
-└── README.md
-
-yaml
-Copiar
-Editar
-
+ETL_Python_BBDD/
+├── config/
+│   ├── __init__.py
+│   ├── settings.py            # se cargan todas las variables de entorno
+│   ├── init/                  # carpeta con las .sql que usa docker
+│   │   ├─── init.sql          # script sql      
+│───├── logs/
+│   │   ├───archivo.log        # archivo con los log de ejecucion
+├── modulos/
+│   ├── correo/
+│   │   ├──__init__.py
+│   │   ├──send_mail.py         # script que permite enviar un resultado por correo
+├── data/
+│   ├── __init__.py
+│   ├── global_vars.py          # se cargan todas las variables de clases
+│   ├── read_csv.py             # lee un archivo CSV
+│   ├── read_sqlserver.py       # Lee una base de datos SQL Server
+├── databaseClient/
+│   ├── __init__.py
+│   ├── client.py               # contiene los engine para conectarse a BBDD
+├── logs/
+│   ├── __init__.py
+│   ├── log_config.py           # configuracion de logger
+├── repository/
+│   ├── __init__.py
+│   ├── sql_repository.py       # maneja las inserciones a la base de datos
+├── utils/
+│   ├── __init__.py
+│   ├── utils.py
 ---
 
 ## 🔧 Configuración
