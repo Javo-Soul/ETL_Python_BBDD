@@ -1,51 +1,57 @@
-✅ README.md — PostgreSQL + pgAdmin con Docker
-markdown
-Copiar
-Editar
-# PostgreSQL + pgAdmin Docker Setup
+# 🚀 ETL_Python_BBDD — PostgreSQL + pgAdmin con Docker
 
-Este proyecto levanta una instancia de PostgreSQL y pgAdmin usando Docker y `docker-compose`, con configuración a través de un archivo `.env`.
+Este proyecto implementa un pipeline ETL en Python que se conecta a distintas bases de datos, con configuración por variables de entorno. También incluye el levantamiento de PostgreSQL y pgAdmin usando Docker y `docker-compose`.
+
 ---
 
-## 📁 Estructura del proyecto
+## 📁 Estructura del Proyecto
 
 ETL_Python_BBDD/
 ├── config/
-│   ├── __init__.py
-│   ├── settings.py            # se cargan todas las variables de entorno
-│   ├── init/                  # carpeta con las .sql que usa docker
-│   │   ├─── init.sql          # script sql      
-│───├── logs/
-│   │   ├───archivo.log        # archivo con los log de ejecucion
-├── modulos/
-│   ├── correo/
-│   │   ├──__init__.py
-│   │   ├──send_mail.py         # script que permite enviar un resultado por correo
-├── data/
-│   ├── __init__.py
-│   ├── global_vars.py          # se cargan todas las variables de clases
-│   ├── read_csv.py             # lee un archivo CSV
-│   ├── read_sqlserver.py       # Lee una base de datos SQL Server
-├── databaseClient/
-│   ├── __init__.py
-│   ├── client.py               # contiene los engine para conectarse a BBDD
+│ ├── init.py
+│ ├── settings.py # Carga variables de entorno
+│ └── init/
+│ └── init.sql # Script SQL usado por Docker
 ├── logs/
-│   ├── __init__.py
-│   ├── log_config.py           # configuracion de logger
+│ └── archivo.log # Log de ejecución
+├── modulos/
+│ └── correo/
+│ ├── init.py
+│ └── send_mail.py # Envío de correos con resultados
+├── data/
+│ ├── init.py
+│ ├── global_vars.py # Variables globales para el ETL
+│ ├── read_csv.py # Lectura de archivos CSV
+│ └── read_sqlserver.py # Lectura desde SQL Server
+├── databaseClient/
+│ ├── init.py
+│ └── client.py # Motores de conexión a BBDD
+├── logs/
+│ ├── init.py
+│ └── log_config.py # Configuración de logger
 ├── repository/
-│   ├── __init__.py
-│   ├── sql_repository.py       # maneja las inserciones a la base de datos
+│ ├── init.py
+│ └── sql_repository.py # Inserciones a la base de datos
 ├── utils/
-│   ├── __init__.py
-│   ├── utils.py
+│ ├── init.py
+│ └── utils.py # Funciones auxiliares
+
+makefile
+Copiar
+Editar
+
 ---
 
 ## 🔧 Configuración
 
-### Archivo `.env`
+### 📄 Archivo `.env`
+
+Debes crear un archivo `.env` en la raíz del proyecto con las siguientes variables:
 
 ```env
 ENVIRONMENT=test
+
+# SQL Server
 DB_HOST_SQL=host
 DB_PORT_SQL=1433
 DB_SQL=database
@@ -65,16 +71,14 @@ POSTGRES_TABLA=data_test
 PGADMIN_DEFAULT_EMAIL=admin@admin.com
 PGADMIN_DEFAULT_PASSWORD=admin123
 PGADMIN_PORT=5050
-
-
-🚀 Levantar los contenedores
-Asegúrate de tener Docker instalado y ejecutando. Luego, en la raíz del proyecto:
+🐳 Levantar los contenedores
+Asegúrate de tener Docker y Docker Compose instalados. Luego, en la raíz del proyecto, ejecuta:
 
 bash
 Copiar
 Editar
 docker compose up -d
-Verifica que estén corriendo:
+Verifica que los contenedores estén activos:
 
 bash
 Copiar
@@ -84,20 +88,24 @@ docker ps
 URL: http://localhost:5050
 
 Email: admin@admin.com
+
 Password: admin123
 
 🔌 Conectar a PostgreSQL desde pgAdmin
-Entra a pgAdmin.
+Inicia sesión en pgAdmin.
 
 Crea un nuevo servidor.
-Usa los siguientes datos:
 
-Name: lo que quieras (ej: Postgres Local)
+Usa los siguientes datos de conexión:
+
+yaml
+Copiar
+Editar
+Name: Postgres Local (o el que prefieras)
 Host: postgres
 Port: 5432
 Username: postgres
-Password: postgres123.
-
+Password: postgres123
 🧼 Apagar y limpiar
 Para detener los contenedores:
 
@@ -105,12 +113,17 @@ bash
 Copiar
 Editar
 docker compose down
-Para borrar volúmenes (incluye la base de datos):
+Para detener y borrar volúmenes (incluye la base de datos):
 
 bash
 Copiar
 Editar
 docker compose down -v
+✅ Notas Adicionales
+Si cambias el puerto de PostgreSQL o pgAdmin, actualízalo también en:
 
-✅ Notas adicionales
-Si cambias el puerto, asegúrate de actualizarlo también en pgAdmin y en el mapeo de ports.
+El archivo .env
+
+El docker-compose.yml
+
+La configuración del servidor en pgAdmin
