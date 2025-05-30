@@ -5,7 +5,7 @@ Este proyecto implementa un pipeline ETL en Python que se conecta a distintas ba
 ---
 
 ## 📁 Estructura del Proyecto
-
+```
 ETL_Python_BBDD/
 ├── config/
 │ ├── init.py
@@ -35,7 +35,7 @@ ETL_Python_BBDD/
 ├── utils/
 │ ├── init.py
 │ └── utils.py # Funciones auxiliares
-
+```
 makefile
 Copiar
 Editar

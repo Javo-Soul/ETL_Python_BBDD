@@ -3,13 +3,12 @@ from modulos.databaseClient.client import conexionSQL
 from modulos.data import global_vars, read_csv, read_sqlserver
 from modulos.logs.log_config import logger
 from datetime import datetime, timedelta
-from modulos.config_loader import cargar_config
 
 def inicializar(filtros:dict):
     try:
         fecha = datetime.now()
         ## --------- Leer archivo de configuración ---------- ##
-        logger.info(f"Archivo INI cargado correctamente desde: {cargar_config().sections()}")
+        logger.info(f"Se Ejecuta Inicializador")
         # ## --------------------------------------------------- ##
         # ## ------------ Crear conexión y repositorio --------- ##
         connection_pool = conexionSQL().conexionPostgress()

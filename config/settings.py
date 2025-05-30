@@ -29,6 +29,8 @@ class PostgresSettings(BaseSettings):
 
 class Settings(BaseSettings):
     environment:str = Field('production', env="ENVIRONMENT")
+    archivo_log:str = Field('log_ejecucion')
+
     sql:SQLSettings = SQLSettings()
     postgres: PostgresSettings = PostgresSettings()
     class Config:

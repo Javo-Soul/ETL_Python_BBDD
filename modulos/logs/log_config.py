@@ -6,14 +6,12 @@ from pathlib import Path
 import pandas as pd
 from datetime import datetime
 import configparser
+from config.settings import settings
 
-## --------- Leer archivo de configuración ---------- ##
-from modulos.config_loader import cargar_config
-config = cargar_config()
 ## -------------------------------------------------- ##
 ######################################################################
 class registroLOG:
-    def setup_logging(log_name= config['etl_name']['etl_name'], log_level=logging.INFO):
+    def setup_logging(log_name= settings.archivo_log, log_level=logging.INFO):
         logs_dir = Path(__file__).resolve().parents[2]/ 'logs'
         logs_dir.mkdir(exist_ok=True)
 

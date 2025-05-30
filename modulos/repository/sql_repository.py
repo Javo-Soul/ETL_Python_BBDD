@@ -7,8 +7,6 @@ from modulos.utils.utils import class_utils
 
 ## -------------------------------------------------- ##
 measure_time = class_utils.measure_time
-dict_gen     = class_utils.dict_generator
-
 ## -------------------------------------------------- ##
 class SQLRepository:
     """
