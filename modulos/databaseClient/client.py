@@ -21,28 +21,31 @@ class conexionSQL:
         self.sql_user     = settings.sql.db_user_sql
         self.sql_pass     = settings.sql.db_pass_sql.get_secret_value()
 
-        self.postgress_host = settings.postgres.postgress_host
-        self.postgress_Database = settings.postgres.postgress_db
-        self.postgress_port    = settings.postgres.postgress_port
-        self.postgress_user    = settings.postgres.postgress_user
-        self.postgress_pass    = settings.postgres.postgress_pass.get_secret_value()
+        self.postgress_host = settings.postgres.postgres_host
+        self.postgress_Database = settings.postgres.postgres_db
+        self.postgress_port    = settings.postgres.postgres_port
+        self.postgress_user    = settings.postgres.postgres_user
+        self.postgress_pass    = settings.postgres.postgres_password.get_secret_value()
     
     ##################################################
     def conexionPostgress(self):
-        conn = None
-        # try:
-        #     conn   = None
-        #     server = self.localhost
-        #     database = self.localDatabase
-        #     logger.info(f"Conexión a la base de datos SQL Server {server}")
-        # except Exception as e:
-        #     logger.error("Error de conexión SQL", exc_info=True)
+        try:
+            url      = None
+            server   = self.postgress_host
+            port     = self.postgress_port
+            user     = self.postgress_user
+            pass_    = self.postgress_pass
+            database = self.postgress_Database
+            url = f"postgresql+psycopg2://{user}:{pass_}@{server}:{port}/{database}"
+            logger.info(f"Conexión a la base de datos SQL Server {server}")
 
-        # return conn
+        except Exception as e:
+            logger.error("Error de conexión SQL", exc_info=True)
+
+        return create_engine(url, echo=False, future=True)
 
     ##################################################
     def conexionSQLServer(self):
-        conn = None
         try:
             url   = None
             server = self.sql_host

@@ -1,23 +1,13 @@
-# repository.py
+#modulos/repository/repository.py
 import os
 import pandas as pd
 from datetime import datetime
 from modulos.logs.log_config import logger
 from modulos.utils.utils import class_utils
 
-## -------- archivo config ------------------ ##
-from modulos.config_loader import cargar_config
-config = cargar_config()
-## ------------------------------------------ ##
-
+## -------------------------------------------------- ##
 measure_time = class_utils.measure_time
 dict_gen     = class_utils.dict_generator
-
-## -------------------------------------------------- ##
-tablaLog = {
-    'logTabla'  : config['sql']['tabla_log_tablas'],
-    'logArchivo': config['sql']['tabla_log_archivos']
-}
 
 ## -------------------------------------------------- ##
 class SQLRepository:
@@ -27,13 +17,13 @@ class SQLRepository:
     def __init__(self, connection_pool):
         self.connection_pool = connection_pool
 
-## -------------------------------------------------- ## 
+## -------------------------------------------------- ##
     def get_connection(self):
         return self.connection_pool
 
-## -------------------------------------------------- ## 
+## -------------------------------------------------- ##
     @measure_time
-    def load_to_staging(self, df, table_name, truncate=True, batch_size=10000, extract_columns=None):
+    def load_to_staging(self, df, table_name, if_exists='append', chunksize=10000):
         """
         Carga datos a una tabla de staging con opción de truncar primero.
         Además, extrae valores de columnas específicas del DataFrame.
@@ -52,62 +42,21 @@ class SQLRepository:
 
         if not isinstance(df, pd.DataFrame) or df.empty:
             logger.warning("DataFrame vacío recibido para carga")
-            dict_result.update({'resultado': 'DataFrame vacío recibido para carga'})
             return False, dict_result, "DataFrame vacío"
 
         try:
-            ###### Si no se pasan columnas a extraer, usar una lista por defecto vacía
-            extract_columns = extract_columns or []
+            # df.to_sql(table_name,con = self.get_connection()
+            #           ,if_exists = if_exists
+            #           ,index=False, method='multi', chunksize=chunksize )
 
-            ###### Extraer valores de interés antes de cargar
-            valores_extraidos = {col: (df[col].iloc[0] if col in df.columns else None) for col in extract_columns}
-            fecha_actual = datetime.now().strftime('%Y-%m-%d')
-            valores_extraidos.update({k: fecha_actual for k in ('fecha', 'fecha_query') if valores_extraidos.get(k) is None})
+            print(table_name,'\n',df.head())
 
-            with self.get_connection() as conn:
-                cursor = conn.cursor()
-                cursor.fast_executemany = True
-
-                # Truncar tabla si se solicita
-                if truncate:
-                    cursor.execute(f"TRUNCATE TABLE {table_name}")
-                    logger.info(f"Tabla {table_name} truncada")
-
-                # Preparar datos para insertar
-                df = df.where(pd.notnull(df), None)  # Reemplazar NaN por None
-                cols = ",".join([f"[{col}]" for col in df.columns])
-                placeholders = ",".join(['?'] * len(df.columns))
-                query = f"INSERT INTO {table_name} ({cols}) VALUES ({placeholders})"
-
-                # Insertar por lotes
-                total_rows = len(df)
-
-                for i in range(0, total_rows, batch_size):
-                    batch = df.iloc[i:i+batch_size].values.tolist()
-                    cursor.executemany(query, batch)
-                    logger.debug(f"Lote insertado: {min(i+batch_size, total_rows)}/{total_rows} filas")
-
-                conn.commit()
-
-                logger.info(f"carga de {df['fecha_ts'].count()} datos en la tabla {table_name}")
-
-                dict_result.update({
-                            'cantidad_total': df.shape[0]
-                            ,'cargados'      : total_rows
-                            ,'dif': df.shape[0]-total_rows
-                            ,'estado_proc': 'Ejecutado correctamente'})
-                dict_result.update(valores_extraidos)
-
-                return True, dict_result, f"{total_rows} filas insertadas en {table_name}"
+            return True, f"{len(df)} filas insertadas en {table_name}"
 
         except Exception as e:
             logger.error(f"Error cargando datos en {table_name}: {str(e)}", exc_info=True)
-            dict_result.update({'estado_proc':str(e)})
-            if 'conn' in locals():
-                conn.rollback()
-
-            return False, dict_result, str(e)
-## -------------------------------------------------- ## 
+            return False, str(e)
+## -------------------------------------------------- ##
 
     @measure_time
     def execute_stored_procedure(self, proc_name, params=None):
@@ -153,14 +102,11 @@ class SQLRepository:
         """
         ## Paso 1: Carga a staging
         try:
-            print(df.head(10), staging_table, target_proc)
-
-            # Paso 1: Carga a staging
-        #     success, temp_dict, msgLoad = self.load_to_staging(df
-        #                                                        ,staging_table
-        #                                                        , truncate=False)
-        #     if not success:
-        #         return False, f"Fallo carga staging: {msgLoad}"
+            #### Paso 1: Carga a staging
+            success, msgLoad = self.load_to_staging(df
+                                                    ,staging_table)
+            # if not success:
+            #     return False, f"Fallo carga staging: {msgLoad}"
 
         # ### Paso 2: Ejecutar procedimiento
         #     for proc in target_proc.values():

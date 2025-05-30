@@ -4,7 +4,6 @@ from pydantic import Field, SecretStr
 from typing import Optional
 import logging
 
-
 class SQLSettings(BaseSettings):
     ### database config origen
     db_host_sql:Optional[str]       = Field(None,env = 'DB_HOST_SQL')
@@ -13,16 +12,19 @@ class SQLSettings(BaseSettings):
     db_user_sql:Optional[str]       = Field(None,env = 'DB_USER_SQL')
     db_pass_sql:Optional[SecretStr] = Field(None,env = 'DB_PASS_SQL')
 
-    #tablas para leer
+    ### tablas para leer
     db_tabla_sql:Optional[str] = Field(None,env = 'DB_TABLA_SQL')
 
 class PostgresSettings(BaseSettings):
     ### database config destino
-    postgress_host:Optional[str]       = Field(None,env = 'POSTGRESS_HOST')
-    postgress_port:Optional[str]       = Field(None,env = 'POSTGRESS_PORT')
-    postgress_db:Optional[str]         = Field(None,env = 'POSTGRESS_DB')
-    postgress_user:Optional[str]       = Field(None,env = 'POSTGRESS_USER')
-    postgress_pass:Optional[SecretStr] = Field(None,env = 'POSTGRESS_PASS')
+    postgres_host:Optional[str]       = Field(None,env = 'POSTGRES_HOST')
+    postgres_port:Optional[str]       = Field(None,env = 'POSTGRES_PORT')
+    postgres_db:Optional[str]         = Field(None,env = 'POSTGRES_DB')
+    postgres_user:Optional[str]       = Field(None,env = 'POSTGRES_USER')
+    postgres_password:Optional[SecretStr] = Field(None,env = 'POSTGRES_PASSWORD')
+
+    ### tablas para cargar los datos extr
+    postgres_tabla:Optional[str] = Field(None,env = 'POSTGRES_TABLA')
 
 
 class Settings(BaseSettings):
@@ -31,7 +33,8 @@ class Settings(BaseSettings):
     postgres: PostgresSettings = PostgresSettings()
     class Config:
         env_file = '.env'
-        env_file_coding = 'utf-8'
+        env_file_encoding = 'utf-8'
         extra = 'ignore' 
 
 settings = Settings()
+

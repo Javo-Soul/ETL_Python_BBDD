@@ -1,8 +1,8 @@
 from modulos import inicializar
 ########################################################
 def main():
-    proceso = inicializar(env='test'
-                          ,dias=1)
+    filtros = {"ID":20}
+    proceso = inicializar(filtros)
     
 
 if __name__ == "__main__":

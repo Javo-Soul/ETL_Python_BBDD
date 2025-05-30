@@ -2,7 +2,7 @@ import pandas as pd
 from datetime import datetime
 from modulos.repository.sql_repository import SQLRepository  # Importación clara
 ## ------------- librerias personalizadas ------------ ##
-from .global_vars import conexiones,fecha_actual,logger,tablasSQL,procSQL
+from .global_vars import conexiones,fecha_actual,logger
 ## ----------------------------------------------- ##
 
 ######################################################################
@@ -44,31 +44,22 @@ class Clasetefabm:
           df = df.astype(df_datatype)
           ## ----------------------------------------------- ##
           ## --------- Cargar usando el repository --------- ##
-          success, message = self.repository.full_load_process(
-              df=df,
-              staging_table = tablasSQL['tabla_tefabm'],
-              target_proc   = {
-                    'carga_data'    :f"{procSQL['proc_prod_tefabm']}",
-                }
-            ) 
+        #   success, message = self.repository.full_load_process(
+        #       df=df,
+        #       staging_table = tablasSQL['tabla_tefabm'],
+        #       target_proc   = {
+        #             'carga_data'    :f"{procSQL['proc_prod_tefabm']}",
+        #         }
+        #     ) 
 
-          if not success:
-              logger.error(f"Error en carga TEFABM: {message}")
-          else:
-              logger.info(f'proceso de carga TEFABM terminado\n')
+        #   if not success:
+        #       logger.error(f"Error en carga TEFABM: {message}")
+        #   else:
+        #       logger.info(f'proceso de carga TEFABM terminado\n')
 
-          return df
+        #   return df
 
       except Exception as e:
-          logger.error(f"Error leyendo TEFABM: {str(e)}", exc_info=True)
-          dict_result = {'nombre_archivo': '','nombre_tabla': tablasSQL['tabla_tefabm'],
-                            'fecha': datetime.now().strftime('%Y-%m-%d') ,
-                            'fecha_query': datetime.now().strftime('%Y-%m-%d') ,
-                            'cantidad_total': 0,
-                            'cargados': 0,'dif': 0,'estado_proc': ''
-                            ,'estado_proc': f"Error leyendo TEFABM {str(e)}"
-                        }
- 
-          self.repository.load_log_table(dict_result)              
+          logger.error(f"Error leyendo TEFABM: {str(e)}", exc_info=True)              
           return pd.DataFrame()
  

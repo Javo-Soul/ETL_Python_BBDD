@@ -5,18 +5,19 @@ from modulos.logs.log_config import logger
 from datetime import datetime, timedelta
 from modulos.config_loader import cargar_config
 
-def inicializar(dias:int=2):
+def inicializar(filtros:dict):
     try:
         fecha = datetime.now()
         ## --------- Leer archivo de configuración ---------- ##
         logger.info(f"Archivo INI cargado correctamente desde: {cargar_config().sections()}")
         # ## --------------------------------------------------- ##
         # ## ------------ Crear conexión y repositorio --------- ##
-        connection_pool = conexionSQL().conexionSQLServer()
+        connection_pool = conexionSQL().conexionPostgress()
         repository = SQLRepository(connection_pool)
         ### --------------------------------------------------- ##
         procAudit = read_sqlserver.ClaseSQL(
-            repository)
+            repository
+            ,filtros)
         df_Audit = procAudit.readSqltable()
         # # ### ------------------------------------ ###
         # for i in range(dias):
