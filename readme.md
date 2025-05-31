@@ -1,6 +1,6 @@
 # 🚀 ETL_Python_BBDD — PostgreSQL + pgAdmin con Docker
 
-Este proyecto implementa un pipeline ETL en Python que se conecta a distintas bases de datos, con configuración por variables de entorno. También incluye el levantamiento de PostgreSQL y pgAdmin usando Docker y `docker-compose`.
+Este proyecto implementa un pipeline ETL en Python (3.12.3) que se conecta a distintas bases de datos, con configuración por variables de entorno. También incluye el levantamiento de PostgreSQL y pgAdmin usando Docker y `docker-compose`.
 
 ---
 
