@@ -89,9 +89,6 @@ Crea un nuevo servidor.
 
 Usa los siguientes datos de conexión:
 
-yaml
-Copiar
-Editar
 Name: Postgres Local (o el que prefieras)
 Host: postgres
 Port: 5432
