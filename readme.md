@@ -36,10 +36,6 @@ ETL_Python_BBDD/
 │ ├── init.py
 │ └── utils.py # Funciones auxiliares
 ```
-makefile
-Copiar
-Editar
-
 ---
 
 ## 🔧 Configuración
@@ -74,15 +70,10 @@ PGADMIN_PORT=5050
 🐳 Levantar los contenedores
 Asegúrate de tener Docker y Docker Compose instalados. Luego, en la raíz del proyecto, ejecuta:
 
-bash
-Copiar
-Editar
 docker compose up -d
 Verifica que los contenedores estén activos:
 
 bash
-Copiar
-Editar
 docker ps
 🌐 Acceder a pgAdmin
 URL: http://localhost:5050
@@ -110,14 +101,10 @@ Password: postgres123
 Para detener los contenedores:
 
 bash
-Copiar
-Editar
 docker compose down
 Para detener y borrar volúmenes (incluye la base de datos):
 
 bash
-Copiar
-Editar
 docker compose down -v
 ✅ Notas Adicionales
 Si cambias el puerto de PostgreSQL o pgAdmin, actualízalo también en:
