@@ -4,12 +4,10 @@ __pycache__/
 *$py.class
 *.env
 *.venv
-*.csv
 *.log
 revisar_tablas.txt
 test.py
 # Distribution / packaging
-archivoscsv/
 test/
 .Python
 env/

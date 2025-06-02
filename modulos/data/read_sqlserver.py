@@ -2,7 +2,7 @@
 import pandas as pd
 from modulos.repository.sql_repository import SQLRepository
 ## ------------- librerias personalizadas ------------ ##
-from .global_vars import conexiones,logger,fecha_actual,measure_time,enginepostgres,enginesql
+from .global_vars import logger,fecha_actual,measure_time,enginepostgres,enginesql
 
 # from services.data_sync_service import DataSyncService
 ## ----------------------------------------------- ##
@@ -28,6 +28,7 @@ class ClaseSQL:
         if succes:
           with enginesql.connect() as conn:
             query     = msfiltros
+            print(query)
             result    = conn.execute(query)
             rows      = result.fetchall()
 

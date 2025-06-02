@@ -31,8 +31,6 @@ class SQLRepository:
             with self.engine.connect() as conn:
                 metadata  = MetaData()
                 tabla_sql = Table(tabla, metadata, autoload_with=self.engine)
-                columnas  = [col.name for col in tabla_sql.columns]
-
                 condiciones = []
                 for key,config in filtros.items():
                         if hasattr(tabla_sql.c, key):
