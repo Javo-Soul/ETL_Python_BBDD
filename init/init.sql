@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS public.data_test
     "ArrDelay" bigint,
     "ArrDel15" boolean,
     "Cancelled" boolean,
-    fecha_ts text COLLATE pg_catalog."default"
+    "fecha_ts" timestamp,
 );
 
 ALTER TABLE IF EXISTS public.data_test

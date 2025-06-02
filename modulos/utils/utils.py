@@ -1,7 +1,7 @@
-# repository.py
+# modulos/utils/utils.py
 import pandas as pd
 import datetime
-import configparser
+from sqlalchemy import and_, or_
 from functools import wraps
 from datetime import datetime
 from modulos.logs.log_config import logger
@@ -23,3 +23,17 @@ class class_utils:
             return result
         return wrapper
 
+    def operadores():
+        OPERADORES = {
+            "==": lambda col, val: col == val,
+            "!=": lambda col, val: col != val,
+            ">":  lambda col, val: col > val,
+            "<":  lambda col, val: col < val,
+            ">=": lambda col, val: col >= val,
+            "<=": lambda col, val: col <= val,
+            "like": lambda col, val: col.like(val),
+            "ilike": lambda col, val: col.ilike(val),
+            "in": lambda col, val: col.in_(val if isinstance(val, list) else [val]),
+        }
+
+        return OPERADORES

@@ -8,33 +8,39 @@ Este proyecto implementa un pipeline ETL en Python (3.12.3) que se conecta a dis
 ```
 ETL_Python_BBDD/
 ├── config/
-│ ├── init.py
-│ ├── settings.py # Carga variables de entorno
-│ └── init/
-│ └── init.sql # Script SQL usado por Docker
+│   ├── __init__.py
+│   ├── settings.py            # Carga variables de entorno
+├── init/
+│   └── init.sql               # Script SQL usado por Docker
 ├── logs/
-│ └── archivo.log # Log de ejecución
+│   └── archivo.log            # Log de ejecución
+├── services/
+│   └── send_mail.py           # envio de correo con el resultado del programa
+│   └── data_sync_service.py   # actualiza los datos de la base de datos postgres
 ├── modulos/
-│ └── correo/
-│ ├── init.py
-│ └── send_mail.py # Envío de correos con resultados
-├── data/
-│ ├── init.py
-│ ├── global_vars.py # Variables globales para el ETL
-│ ├── read_csv.py # Lectura de archivos CSV
-│ └── read_sqlserver.py # Lectura desde SQL Server
-├── databaseClient/
-│ ├── init.py
-│ └── client.py # Motores de conexión a BBDD
-├── logs/
-│ ├── init.py
-│ └── log_config.py # Configuración de logger
-├── repository/
-│ ├── init.py
-│ └── sql_repository.py # Inserciones a la base de datos
-├── utils/
-│ ├── init.py
-│ └── utils.py # Funciones auxiliares
+│   ├── bootstrap/
+│   │   ├── __init__.py
+│   │   └── initializer.py    # aquí va el inicializador
+│   ├── correo/
+│   │   ├── __init__.py
+│   │   └── send_mail.py      # Envío de correos con resultados
+│   ├── data/
+│   │   ├── __init__.py
+│   │   ├── global_vars.py    # Variables globales para el ETL
+│   │   ├── read_csv.py       # Lectura de archivos CSV
+│   │   └── read_sqlserver.py # Lectura desde SQL Server
+│   ├── databaseClient/
+│   │   ├── __init__.py
+│   │   └── client.py         # Motores de conexión a BBDD
+│   ├── logs/
+│   │   ├── __init__.py
+│   │   └── log_config.py     # Configuración de logger
+│   ├── repository/
+│   │   ├── __init__.py
+│   │   └── sql_repository.py # Inserciones a la base de datos
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   └── utils.py          # Funciones auxiliares
 ```
 ---
 

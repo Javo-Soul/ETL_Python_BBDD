@@ -1,75 +1,60 @@
-
 #modulos/data/read_sqlserver.py
 import pandas as pd
-from datetime import datetime
-from sqlalchemy import Select,MetaData,Table
-
 from modulos.repository.sql_repository import SQLRepository
-from config.settings import settings
 ## ------------- librerias personalizadas ------------ ##
-from .global_vars import conexiones,logger,fecha_actual
+from .global_vars import conexiones,logger,fecha_actual,measure_time,enginepostgres,enginesql
+
+# from services.data_sync_service import DataSyncService
 ## ----------------------------------------------- ##
 
 ######################################################################
 class ClaseSQL:
-  def __init__(self,repository: SQLRepository,filtros:dict={}):
+  def __init__(self,repository: SQLRepository,tabla:str,filtros:dict={}):
     self.repository = repository
-    self.filtros = filtros
+    self.filtros    = filtros
+    self.tabla      = tabla
 
 ######################################################################
+  @measure_time
   def readSqltable(self):
     try:
-        filtros_consulta = {}
         logger.info(f'leyendo datos de readSqltable del dia {fecha_actual}')
         # ... lógica de lectura...
-        df_tabla = pd.DataFrame() 
-        engine   = conexiones.conexionSQLServer()
+        df_tabla        = pd.DataFrame()
+        ## se validan los filtros en base a las columnas existentes
+        succes, msfiltros = self.repository.validate_fields(self.tabla
+                                                            ,self.filtros)
+        ## si las columnas existen, se extrae la data desde el origen
+        if succes:
+          with enginesql.connect() as conn:
+            query     = msfiltros
+            result    = conn.execute(query)
+            rows      = result.fetchall()
 
-        print('self.filtros :', self.filtros)
+            df_tabla  = pd.DataFrame(rows, columns= result.keys())
+        #### se le agrega una columna con la fecha de ejecucion
+            df_tabla['fecha_ts'] = fecha_actual
+        # ### -------------------------------------------------- ###
+            succes,message = self.repository.full_load_process(df_tabla
+                                                               ,self.tabla
+                                                               ,enginepostgres)
 
-        with engine.connect() as conn:
-          metadata  = MetaData()
-          tabla_sql = Table(settings.sql.db_tabla_sql, metadata, autoload_with=engine)
-          columnas  = [col.name for col in tabla_sql.columns]
-          for key,valor in self.filtros.items():
-            for col in columnas:
-              if key == col:
-                filtros_consulta.update({key:valor})
+        # ## con el dataframe creado, se insertan los datos en el destino
+        # ## es una funcion sync, pero aun falta por pulir
+        # # succes, message = sync_service.sync_dataframe_to_table(df_tabla
+        # #                                                         ,self.tabla
+        # #                                                         ,pk_column="ID")
 
-        print("filtros_consulta : ",filtros_consulta)  
-
-        with engine.connect() as conn:
-          metadata  = MetaData()
-          tabla_sql = Table(settings.sql.db_tabla_sql, metadata, autoload_with=engine)
-          query     = Select(tabla_sql).where(tabla_sql.c.OriginAirportID == 15304)
-          result    = conn.execute(query)
-          rows      = result.fetchall()
-
-          df_tabla  = pd.DataFrame(rows, columns= result.keys())
-
-        ### se le agrega una columna con la fecha de ejecucion
-        df_tabla['fecha_ts'] = fecha_actual
-        # # --------------------------------------------------#
-        # succes, message = 
+        # ### -------------------------------------------------- ###
+        if not succes:
+            logger.error(f'Error en readSqltable: {message} ')
         
-        self.repository.full_load_process(
-            df=df_tabla,
-            staging_table = settings.postgres.postgres_tabla,
-            target_proc   = {
-                    'carga_data'    :"proc",
-                }
-            )
-
-        # if not succes:
-        #     logger.error(f'Error en Carga Audit: {message} ')
+        else:
+            logger.info(f'proceso de readSqltable terminado')
         
-        # else:
-        #     logger.info(f'proceso de carga audit terminado\n')
-        
-        return df_tabla
+        return df_tabla if not df_tabla.empty else pd.DataFrame()
     except Exception as e:
       logger.error(f'leyendo datos de readSqltable : {e}', exc_info=True)
-
-    ### ----------------------------------------- ###
+        ### -------------------------------------------------- ###
     ##############################################################
     return

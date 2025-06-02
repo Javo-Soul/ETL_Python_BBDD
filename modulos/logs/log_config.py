@@ -1,3 +1,4 @@
+#modulos/logs/log_config.py
 import os
 import configparser
 import logging

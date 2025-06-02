@@ -4,20 +4,53 @@ import pandas as pd
 from datetime import datetime
 from modulos.logs.log_config import logger
 from modulos.utils.utils import class_utils
-
+from sqlalchemy import Select,MetaData,Table,and_, or_,text
+from sqlalchemy.dialects.postgresql import insert
+from  modulos.databaseClient.client import conexionSQL
+from modulos.utils.utils import class_utils
 ## -------------------------------------------------- ##
 measure_time = class_utils.measure_time
+operadores   = class_utils.operadores()
+conexiones   = conexionSQL()
 ## -------------------------------------------------- ##
 class SQLRepository:
     """
     Clase para manejar operaciones de carga y ejecución de procedimientos en la base de datos SQL.
     """
-    def __init__(self, connection_pool):
-        self.connection_pool = connection_pool
+    def __init__(self, engine):
+        self.engine = engine
 
 ## -------------------------------------------------- ##
     def get_connection(self):
         return self.connection_pool
+
+## -------------------------------------------------- ##
+    @measure_time
+    def validate_fields(self,tabla ,filtros:dict):
+        try:
+            with self.engine.connect() as conn:
+                metadata  = MetaData()
+                tabla_sql = Table(tabla, metadata, autoload_with=self.engine)
+                columnas  = [col.name for col in tabla_sql.columns]
+
+                condiciones = []
+                for key,config in filtros.items():
+                        if hasattr(tabla_sql.c, key):
+                            col = tabla_sql.c[key]
+                            operador = config.get("op", "==")
+                            valor    = config.get("value")
+                            if operador in operadores:
+                                condiciones.append(operadores[operador](col, valor))
+                            else:
+                                logger.warning(f"Operador desconocido: {operador}")
+
+                query = Select(tabla_sql).where(and_(*condiciones)) if condiciones else Select(tabla_sql)
+
+            return True,query
+        
+        except Exception as e:
+            logger.error(f"Error en validate_fields: {e}", exc_info=True)
+            return False, str(e)
 
 ## -------------------------------------------------- ##
     @measure_time
@@ -43,78 +76,78 @@ class SQLRepository:
             return False, dict_result, "DataFrame vacío"
 
         try:
-            # df.to_sql(table_name,con = self.get_connection()
-            #           ,if_exists = if_exists
-            #           ,index=False, method='multi', chunksize=chunksize )
+            df.to_sql(table_name,con = self.get_connection()
+                      ,if_exists = if_exists
+                      ,index=False, method='multi', chunksize=chunksize )
 
-            print(table_name,'\n',df.head())
+            print('\n',df.head(),'\n')
 
-            return True, f"{len(df)} filas insertadas en {table_name}"
+            return True, f"filas_insertadas : {len(df)}"
 
         except Exception as e:
             logger.error(f"Error cargando datos en {table_name}: {str(e)}", exc_info=True)
-            return False, str(e)
+            return False, f"Error cargando datos en {table_name}: {str(e)}"
 ## -------------------------------------------------- ##
 
     @measure_time
-    def execute_stored_procedure(self, proc_name, params=None):
+    def upsert_data(self, df, table_name,engine):
         """
-        Ejecuta un procedimiento almacenado
-        Args:
-            proc_name: Nombre del procedimiento
-            params: Parámetros como diccionario {nombre: valor}
-        Returns:
-            Tuple (bool, str): Indicador de éxito y mensaje
+        Realiza un UPSERT en la tabla especificada utilizando SQLAlchemy.
         """
-        try:
-            with self.get_connection() as conn:
-                cursor = conn.cursor()
-                # Construir llamada al procedimiento
-                if params:
-                    param_names = ",".join(f"@{k}=?" for k in params.keys())
-                    query = f"EXEC {proc_name} {param_names}"
-                    cursor.execute(query, list(params.values()))
-                else:
-                    cursor.execute(f"EXEC {proc_name}")
+        if df.empty:
+            logger.warning(f"DataFrame vacío recibido para UPSERT en {table_name}")
+            return False, "DataFrame vacío"
 
-                conn.commit()
-                return True, f"Procedimiento {proc_name}: Ejecutado correctamente"
-                
+        if engine.dialect.name != 'postgresql':
+            return False, "El engine proporcionado no corresponde a PostgreSQL"
+
+        try:
+            # Reflejar la tabla desde la base de datos
+            metadata = MetaData()
+            metadata.reflect(engine)
+            table = metadata.tables.get(table_name)
+
+            if table is None:
+                logger.error(f"No se encontró la tabla '{table_name}' en la base de datos.")
+                return False, f"Tabla '{table_name}' no encontrada"
+
+            # Crear sentencia INSERT con los datos
+            insert_stmt = insert(table).values(df.to_dict(orient="records"))
+
+            # Preparar columnas para actualizar (excluye clave primaria)
+            update_dict = {
+                col.name: insert_stmt.excluded[col.name]
+                for col in table.columns
+                if col.name.lower() != 'id'  # Ajusta si tu clave tiene otro nombre
+            }
+
+            # UPSERT con ON CONFLICT DO UPDATE
+            upsert_stmt = insert_stmt.on_conflict_do_update(
+                index_elements=['ID'],  # Asegúrate de que 'ID' es tu clave única
+                set_=update_dict
+            )
+
+            # Ejecutar la transacción
+            with engine.begin() as conn:
+                result = conn.execute(upsert_stmt)
+                rowcount = result.rowcount
+
+            logger.info(f"UPSERT exitoso en '{table_name}': {rowcount} filas afectadas")
+            return True, f"{rowcount} filas insertadas/actualizadas en '{table_name}'"
+
         except Exception as e:
-            logger.error(f"Error ejecutando {proc_name}: {str(e)}", exc_info=True)
-            if 'conn' in locals():
-                conn.rollback()
-            return False, str(e)
+            logger.error(f"Error durante UPSERT en '{table_name}': {str(e)}", exc_info=True)
+            return False, f"Error durante UPSERT en '{table_name}': {str(e)}"
 
 ## -------------------------------------------------- ##
     @measure_time
-    def full_load_process(self, df, staging_table, target_proc:dict):
+    def full_load_process(self, df, target_table, engine):
         """
-        Proceso completo de carga: staging + procedimiento
-        Args:
-            df: DataFrame con datos
-            staging_table: Tabla de staging
-            target_proc: Procedimiento para consolidar datos
-        Returns:
-            Tuple (bool, str): Resultado combinado del proceso
+        Proceso completo de carga tipo UPSERT.
         """
-        ## Paso 1: Carga a staging
         try:
-            #### Paso 1: Carga a staging
-            success, msgLoad = self.load_to_staging(df
-                                                    ,staging_table)
-            # if not success:
-            #     return False, f"Fallo carga staging: {msgLoad}"
-
-        # ### Paso 2: Ejecutar procedimiento
-        #     for proc in target_proc.values():
-        #         success, msgProc = self.execute_stored_procedure(proc)
-
-        #     if not success:
-        #         return False, f"Fallo procedimiento: {msgProc}"
-
-        #     return True, "Proceso completo exitoso"
-        
+            success, message = self.upsert_data(df, target_table,engine)
+            return success, message
         except Exception as e:
-            logger.error("Fallo el proceso:",e, exc_info=True)
-
+            logger.error("Error en full_load_process:", e, exc_info=True)
+            return False, str(e)

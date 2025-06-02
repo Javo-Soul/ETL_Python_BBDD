@@ -1,9 +1,14 @@
-from modulos import inicializar
+# main.py
+from modulos.bootstrap.initializer import inicializar
+
 ########################################################
 def main():
-    filtros = {"ID":20}
+    filtros = {
+    "OriginAirportID": {"op": "==", "value": 15304},
+    "DayofMonth"     : {"op": ">=", "value": 15},
+    # "ID"             : {"op": "==", "value": 9844}
+    }
     proceso = inicializar(filtros)
-    
 
 if __name__ == "__main__":
     main()

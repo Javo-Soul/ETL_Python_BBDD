@@ -1,4 +1,4 @@
-# modulos/conexionesSQL/client.py
+# modulos/databaseClient/client.py
 from sqlalchemy import create_engine
 from sqlalchemy.engine import Engine
 from sqlalchemy.exc import SQLAlchemyError,DatabaseError
@@ -113,4 +113,5 @@ class conexionSQL:
         #         pass
 
         # return response
+
 
