@@ -20,3 +20,17 @@ def inicializar(filtros: dict):
 
     except Exception as e:
         logger.error(f'Error en initializer: {str(e)}')
+
+
+# engine = conexionSQL().conexionSQLServer()
+# with engine.connect() as conn:
+#     metadata = MetaData()
+#     tabla    = Table("data_test",metadata,schema="dbo",autoload_with=engine)
+#     query    = Select(tabla)
+#     result   = conn.execute(query)
+#     rows   = result.fetchall()    
+
+# df_result = pd.DataFrame(rows, columns=result.keys())
+
+# df_data   = pd.read_csv('data_csv/sample.csv', sep=';')
+# df_data.to_sql("data_test",con=engine,schema= "dbo",if_exists='append', index=False)
