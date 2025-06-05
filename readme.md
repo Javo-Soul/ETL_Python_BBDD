@@ -1,119 +1,226 @@
-# 🚀 ETL_Python_BBDD — PostgreSQL + pgAdmin con Docker
+# 🚀 ETL_Python_BBDD — ETL con SQL Server, PostgreSQL y pgAdmin en Docker
 
-Este proyecto implementa un pipeline ETL en Python (3.12.3) que se conecta a distintas bases de datos, con configuración por variables de entorno. También incluye el levantamiento de PostgreSQL y pgAdmin usando Docker y `docker-compose`.
+Este proyecto implementa un pipeline ETL en Python (3.12.3) que se conecta a distintas bases de datos utilizando variables de entorno. El entorno incluye SQL Server, PostgreSQL y pgAdmin, todo gestionado mediante Docker y `docker-compose`.
+
+> ⚠️ **Importante**: Este entorno está pensado solo para desarrollo. No utilices las credenciales por defecto en entornos de producción.
 
 ---
 
-## 📁 Estructura del Proyecto
+## 🧩 Tecnologías usadas
+
+- **Python 3.12.3**
+- **SQL Server 2019**
+- **PostgreSQL 16**
+- **pgAdmin 4**
+- **Docker & Docker Compose**
+
+---
+
+## ⚙️ Requisitos previos
+
+- Docker Desktop instalado
+- Docker Compose
+- Git (opcional)
+- 4 GB o más de RAM disponibles para Docker
+
+---
+
+## ⚡ Configuración rápida
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/Javo-Soul/ETL_Python_BBDD.git
+   cd ETL_Python_BBDD
+   ```
+
+2. Inicia los contenedores:
+   ```bash
+   docker-compose build --no-cache sqlserver
+
+   docker-compose up -d
+   
+   # si algo de esto falla, ve mas abajo a ❗Solución de problemas
+   ```
+
+3. Espera 2–3 minutos a que todos los servicios se inicialicen por completo.
+---
+
+## 📁 Estructura del proyecto
+
 ```
 ETL_Python_BBDD/
+├── docker-compose.yml
+├── Dockerfile.mssql
+├── init/
+│   ├── postgres-init/         # Scripts SQL para PostgreSQL
+│   │   └── init.sql
+│   └── sqlserver-init/        # Scripts SQL para SQL Server
+│       ├── entrypoint.sh
+│       └── init.sql
 ├── config/
 │   ├── __init__.py
-│   ├── settings.py            # Carga variables de entorno
-├── init/
-│   └── init.sql               # Script SQL usado por Docker
+│   └── settings.py            # Carga variables de entorno
 ├── logs/
 │   └── archivo.log            # Log de ejecución
 ├── services/
-│   └── send_mail.py           # envio de correo con el resultado del programa
-│   └── data_sync_service.py   # actualiza los datos de la base de datos postgres
+│   ├── send_mail.py           # Envío de correos con el resultado del programa
+│   └── data_sync_service.py   # Actualiza los datos en la base de datos PostgreSQL
 ├── modulos/
 │   ├── bootstrap/
-│   │   ├── __init__.py
-│   │   └── initializer.py    # aquí va el inicializador
+│   │   └── initializer.py     # Inicialización del sistema
 │   ├── correo/
-│   │   ├── __init__.py
-│   │   └── send_mail.py      # Envío de correos con resultados
+│   │   └── send_mail.py       # Envío de correos
 │   ├── data/
-│   │   ├── __init__.py
-│   │   ├── global_vars.py    # Variables globales para el ETL
-│   │   ├── read_csv.py       # Lectura de archivos CSV
-│   │   └── read_sqlserver.py # Lectura desde SQL Server
+│   │   ├── global_vars.py     # Variables globales para el ETL
+│   │   ├── read_csv.py        # Lectura de archivos CSV
+│   │   └── read_sqlserver.py  # Lectura desde SQL Server
 │   ├── databaseClient/
-│   │   ├── __init__.py
-│   │   └── client.py         # Motores de conexión a BBDD
+│   │   └── client.py          # Motores de conexión a bases de datos
 │   ├── logs/
-│   │   ├── __init__.py
-│   │   └── log_config.py     # Configuración de logger
+│   │   └── log_config.py      # Configuración de logging
 │   ├── repository/
-│   │   ├── __init__.py
-│   │   └── sql_repository.py # Inserciones a la base de datos
-│   ├── utils/
-│   │   ├── __init__.py
-│   │   └── utils.py          # Funciones auxiliares
+│   │   └── sql_repository.py  # Inserciones a la base de datos
+│   └── utils/
+│       └── utils.py           # Funciones auxiliares
 ```
+
 ---
 
-## 🔧 Configuración
+## 🔄 Flujo del ETL
+
+1. **Extract**: Se obtienen datos desde SQL Server.
+2. **Transform**: Se procesan con Python (p. ej., limpieza, enriquecimiento).
+3. **Load**: Los datos se insertan en PostgreSQL.
+4. **Notificación**: Se envía un correo con el resultado del proceso.
+
+---
+
+## 🛠️ Configuración personalizada
 
 ### 📄 Archivo `.env`
 
-Debes crear un archivo `.env` en la raíz del proyecto con las siguientes variables:
+Edita el archivo `.env` con tus valores:
 
 ```env
+# Entorno
 ENVIRONMENT=test
 
 # SQL Server
-DB_HOST_SQL=host
+DB_HOST_SQL=localhost
 DB_PORT_SQL=1433
-DB_SQL=database
-DB_USER_SQL=user
-DB_PASS_SQL=password
-DB_TABLA_SQL=tabla_SQL
+DB_SQL=database_test
+DB_USER_SQL=python_dev
+DB_PASS_SQL=python_dev123.
+DB_TABLA_SQL=data_test
 
 # PostgreSQL
 POSTGRES_HOST=localhost
 POSTGRES_PORT=5433
 POSTGRES_DB=postgres
 POSTGRES_USER=postgres
-POSTGRES_PASSWORD=password
+POSTGRES_PASSWORD=postgres123.
 POSTGRES_TABLA=data_test
 
 # pgAdmin
 PGADMIN_DEFAULT_EMAIL=admin@admin.com
 PGADMIN_DEFAULT_PASSWORD=admin123
 PGADMIN_PORT=5050
-🐳 Levantar los contenedores
-Asegúrate de tener Docker y Docker Compose instalados. Luego, en la raíz del proyecto, ejecuta:
+```
 
-docker compose up -d
-Verifica que los contenedores estén activos:
+### Agregar scripts de inicialización
 
-bash
-docker ps
-🌐 Acceder a pgAdmin
-URL: http://localhost:5050
+- **SQL Server**: Coloca tus scripts en `init/sqlserver-init/`
+- **PostgreSQL**: Coloca tus scripts en `init/postgres-init/`
 
-Email: admin@admin.com
+---
 
-Password: admin123
+## 🧪 Servicios disponibles
 
-🔌 Conectar a PostgreSQL desde pgAdmin
-Inicia sesión en pgAdmin.
+### ✅ SQL Server 2019
+- Puerto: `1433`
+- Usuario SA: `sa`
+- Contraseña: `SqlServer2024!`
+- Usuario dev: `python_dev / python_dev123.`
+- Base de datos inicial: `database_test`
 
-Crea un nuevo servidor.
+### ✅ PostgreSQL 16
+- Puerto mapeado: `5433` (interno 5432)
+- Usuario: `postgres`
+- Contraseña: `postgres123.`
+- Base de datos: `postgres`
 
-Usa los siguientes datos de conexión:
+### ✅ pgAdmin 4
+- URL: [http://localhost:5050](http://localhost:5050)
+- Email: `admin@admin.com`
+- Contraseña: `admin123`
 
-Name: Postgres Local (o el que prefieras)
-Host: postgres
-Port: 5432
-Username: postgres
-Password: postgres123
-🧼 Apagar y limpiar
-Para detener los contenedores:
+#### 🔌 Conectar pgAdmin a PostgreSQL
 
-bash
-docker compose down
-Para detener y borrar volúmenes (incluye la base de datos):
+1. Inicia sesión en pgAdmin.
+2. Crea un nuevo servidor con:
+   - **Name**: `Postgres Local`
+   - **Host**: `postgres`
+   - **Port**: `5432`
+   - **Username**: `postgres`
+   - **Password**: `postgres123.`
 
-bash
-docker compose down -v
-✅ Notas Adicionales
-Si cambias el puerto de PostgreSQL o pgAdmin, actualízalo también en:
+---
 
-El archivo .env
+## 🧾 Comandos útiles
 
-El docker-compose.yml
+### Ver logs de SQL Server
+```bash
+docker logs -f sqlserver_container
+```
 
-La configuración del servidor en pgAdmin
+### Conectarse a SQL Server desde contenedor
+```bash
+docker exec -it sqlserver_container /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "SqlServer2024!" -Q "SELECT name FROM sys.databases"
+```
+
+### Ejecutar un script SQL manualmente
+```bash
+docker exec sqlserver_container /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "SqlServer2024!" -i /docker-entrypoint-initdb.d/init.sql
+```
+
+### Reiniciar todo el entorno
+```bash
+docker-compose down -v
+docker-compose up -d
+```
+
+---
+
+## ❗ Solución de problemas
+
+### No se crearon los usuarios y las tablas en SQL Server
+1. Verifica manualmente: docker exec -it sqlserver_container ls -la /docker-entrypoint-initdb.d/
+deberias ver algo asi :
+drwxrwxrwx 1 root root 4096 Jun  4 23:37 .
+drwxr-xr-x 1 root root 4096 Jun  5 00:33 ..
+-rwxrwxrwx 1 root root  847 Jun  5 00:23 entrypoint.sh
+-rwxrwxrwx 1 root root 2375 Jun  4 22:43 init.sql
+
+2. Ejecuta manualmente el script: docker exec sqlserver_container /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "SqlServer2024!" -i /docker-entrypoint-initdb.d/init.sql
+deberias ver algo asi :
+Changed database context to 'master'.
+Changed database context to 'database_test'.
+
+### SQL Server no inicia
+1. Verifica los logs:
+   ```bash
+   docker logs sqlserver_container
+   ```
+
+2. Asegúrate de que la contraseña cumple con los requisitos:
+   - Al menos 8 caracteres
+   - Una mayúscula, una minúscula, un número y un símbolo
+
+3. Si el problema persiste:
+   ```bash
+   docker-compose down -v
+   docker-compose up -d
+   ```
+
+---
+

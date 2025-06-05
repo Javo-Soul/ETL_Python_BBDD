@@ -13,9 +13,9 @@ services:
       - "${POSTGRES_PORT}:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-      - ./init:/docker-entrypoint-initdb.d  # <--- esta línea monta los scripts
+      - ./init/postgres-init:/docker-entrypoint-initdb.d
     networks:
-      - postgres_net
+      - app_net
 
   pgadmin:
     image: dpage/pgadmin4
@@ -33,11 +33,31 @@ services:
     volumes:
       - pgadmin_data:/var/lib/pgadmin
     networks:
-      - postgres_net
+      - app_net
+
+  sqlserver:
+    build:
+      context: .
+      dockerfile: Dockerfile.mssql
+    container_name: sqlserver_container
+    restart: unless-stopped
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=SqlServer2024!
+      - MSSQL_PID=Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlserver_data:/var/opt/mssql
+      - ./init/sqlserver-init:/docker-entrypoint-initdb.d
+    networks:
+      - app_net
+    # command: ["bash", "-c", "/docker-entrypoint-initdb.d/entrypoint.sh"]
 
 volumes:
   postgres_data:
   pgadmin_data:
+  sqlserver_data:
 
 networks:
-  postgres_net:
+  app_net:
