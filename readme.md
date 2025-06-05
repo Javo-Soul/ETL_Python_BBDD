@@ -34,13 +34,15 @@ Este proyecto implementa un pipeline ETL en Python (3.12.3) que se conecta a dis
    ```
 
 2. Inicia los contenedores:
+
    ```bash
    docker-compose build --no-cache sqlserver
-
-   docker-compose up -d
-   
-   # si algo de esto falla, ve mas abajo a ❗Solución de problemas
    ```
+
+   ```bash
+   docker-compose up -d
+   ```
+   # si algo de esto falla, ve mas abajo a ❗Solución de problemas
 
 3. Espera 2–3 minutos a que todos los servicios se inicialicen por completo.
 ---
