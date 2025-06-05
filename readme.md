@@ -195,21 +195,24 @@ docker-compose up -d
 
 ### No se crearon los usuarios y las tablas en SQL Server
 1. Verifica manualmente: 
+```bash
 docker exec -it sqlserver_container ls -la /docker-entrypoint-initdb.d/
+```
 
 deberias ver algo asi :
-drwxrwxrwx 1 root root 4096 Jun  4 23:37 .
-drwxr-xr-x 1 root root 4096 Jun  5 00:33 ..
--rwxrwxrwx 1 root root  847 Jun  5 00:23 entrypoint.sh
--rwxrwxrwx 1 root root 2375 Jun  4 22:43 init.sql
+- drwxrwxrwx 1 root root 4096 Jun  4 23:37 .
+- drwxr-xr-x 1 root root 4096 Jun  5 00:33 ..
+- rwxrwxrwx 1 root root  847 Jun  5 00:23 entrypoint.sh
+- rwxrwxrwx 1 root root 2375 Jun  4 22:43 init.sql
 
 2. Ejecuta manualmente el script: 
-
+```bash
 docker exec sqlserver_container /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "SqlServer2024!" -i /docker-entrypoint-initdb.d/init.sql
+```
 
 deberias ver algo asi :
-Changed database context to 'master'.
-Changed database context to 'database_test'.
+- Changed database context to 'master'.
+- Changed database context to 'database_test'.
 
 ### SQL Server no inicia
 1. Verifica los logs:
